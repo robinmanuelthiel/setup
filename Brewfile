@@ -1,6 +1,7 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
+tap "romkatv/powerlevel10k"
 
 # Development
 brew "azure-cli"
@@ -10,6 +11,7 @@ cask "visual-studio-code"
 cask "dotnet-sdk"
 brew "kubernetes-cli"
 brew "kubectx"
+brew "kube-ps1"
 brew "openshift-cli"
 brew "helm"
 brew "node"
@@ -18,7 +20,8 @@ cask "docker"
 cask "powershell"
 brew "tree"
 brew "gettext", link: true # for envsubst
-brew "fzf" # https://github.com/junegunn/fzf
+brew "fzf"
+brew "jq"
 cask "postman"
 
 # Design
@@ -49,3 +52,8 @@ brew "cmatrix"
 mas "ToothFairy", id: 1191449274
 mas "Dato", id: 1470584107
 mas "Display Menu", id: 549083868
+
+# Shell
+brew "romkatv/powerlevel10k/powerlevel10k"
+brew "zsh-syntax-highlighting"
+brew "zsh-autosuggestions"

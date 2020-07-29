@@ -77,13 +77,15 @@ source "$(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" # Set Theme 
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $ZSH/oh-my-zsh.sh
+
 plugins=(
     git 
     zsh-autosuggestions
 )
-
-source "$(brew --prefix)/opt/zsh-syntax-highlighting/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-source $ZSH/oh-my-zsh.sh
 
 # Not needed, because integrated in Powerleve10k
 #source "$(brew --prefix)/opt/kube-ps1/share/kube-ps1.sh"
