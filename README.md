@@ -1,10 +1,15 @@
 # dotfiles
 
-Install tools
+## Install tools
 
 ```
 brew bundle
 ```
+
+### What needs to be installed manually
+
+- [Global Protect](https://microsoft.sharepoint.com/sites/Network_Connectivity/SitePages/RemoteAccess/GlobalProtect-Desktop-VPN-app-for-Mac.aspx)
+- [Audacity](https://www.audacityteam.org/)
 
 Configure commandline
 
@@ -22,3 +27,4 @@ Open Shell to install the correct font. All other settings will be overwritten l
 ```
 cp .p10k.zsh ~
 ```
+

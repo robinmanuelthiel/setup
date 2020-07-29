@@ -2,6 +2,7 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
 tap "romkatv/powerlevel10k"
+tap "homebrew/cask-drivers"
 
 # Development
 brew "azure-cli"
@@ -27,9 +28,11 @@ cask "postman"
 # Design
 cask "figma"
 cask "sketch"
+cask "ultimaker-cura"
 
 # Essentials
 cask "google-chrome"
+cask "firefox"
 cask "slack"
 cask "spotify"
 cask "microsoft-office"
@@ -43,6 +46,8 @@ mas "Todoist", id: 585829637
 cask "Timeular"
 cask "soundcleod"
 cask "airserver"
+mas "Microsoft Remote Desktop", id: 1295203466
+cask "sonos"
 
 # macOS Tools
 mas "Magent", id: 441258766
@@ -52,6 +57,10 @@ brew "cmatrix"
 mas "ToothFairy", id: 1191449274
 mas "Dato", id: 1470584107
 mas "Display Menu", id: 549083868
+
+# Driver
+cask "logitech-options"
+cask "displaylink"
 
 # Shell
 brew "romkatv/powerlevel10k/powerlevel10k"
