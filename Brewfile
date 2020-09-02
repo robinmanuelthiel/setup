@@ -24,6 +24,7 @@ brew "gettext", link: true # for envsubst
 brew "fzf"
 brew "jq"
 cask "postman"
+cask "google-cloud-sdk"
 
 # Design
 cask "figma"
@@ -48,6 +49,7 @@ cask "soundcleod"
 cask "airserver"
 mas "Microsoft Remote Desktop", id: 1295203466
 cask "sonos"
+cask "obs"
 
 # macOS Tools
 mas "Magent", id: 441258766
@@ -57,6 +59,7 @@ brew "cmatrix"
 mas "ToothFairy", id: 1191449274
 mas "Dato", id: 1470584107
 mas "Display Menu", id: 549083868
+cask "karabiner-elements"
 
 # Driver
 cask "logitech-options"
