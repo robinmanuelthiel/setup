@@ -2,19 +2,19 @@
   "entries": {
     "tap": {
       "homebrew/bundle": {
-        "revision": "5850c38d68c8e97e00264929729cbe6f0e719bd5"
+        "revision": "18a9b3fb62be07865a7d60e7bdcb0404bfb9e8b0"
       },
       "homebrew/cask": {
-        "revision": "54c4c12406ce0df5d23ba916cbdc55e11fd3d918"
+        "revision": "63b504be86ce5c4c9872eb49521d6f1f97c28dc0"
       },
       "homebrew/core": {
-        "revision": "0687baaf14e7b16c383d101fcc3b954cfb05ffe8"
+        "revision": "ea9dc88e6ceb5b9f5822e7f44b59f73ddf182178"
       },
       "romkatv/powerlevel10k": {
-        "revision": "24e3945a989753d681a944563cc6dc1d098adfea"
+        "revision": "f5858bc166b564dadd7b5d84e9ac91da7714c83c"
       },
       "homebrew/cask-drivers": {
-        "revision": "b0475060828075e2b312f58e339383bd95b87ba6"
+        "revision": "1ebb1806dea938605fb7381c4fc4cbd584491eb2"
       }
     },
     "cask": {
@@ -43,7 +43,7 @@
         }
       },
       "dotnet-sdk": {
-        "version": "3.1.401,692921be-5cd6-42b5-8c52-0c17cb5ec580:1b0d95cd4950a58ac069095bdf976f6e",
+        "version": "3.1.402,340e6cc2-cce5-44ad-aab6-012233d90aa7:265cf15bcbe10fb8445060f792e48bf9",
         "options": {
           "full_name": "dotnet-sdk"
         }
@@ -157,7 +157,7 @@
         }
       },
       "ultimaker-cura": {
-        "version": "4.7.0",
+        "version": "4.7.1",
         "options": {
           "full_name": "ultimaker-cura"
         }
@@ -249,22 +249,22 @@
         }
       },
       "kubernetes-cli": {
-        "version": "1.19.0",
+        "version": "1.19.1",
         "bottle": {
           "cellar": ":any_skip_relocation",
           "prefix": "/usr/local",
           "files": {
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/kubernetes-cli-1.19.0.catalina.bottle.tar.gz",
-              "sha256": "46b7d96c97256a2a4a55fcbb8c72085a76ac6eac1b61a9d030d07ed7537f2c5c"
+              "url": "https://homebrew.bintray.com/bottles/kubernetes-cli-1.19.1.catalina.bottle.tar.gz",
+              "sha256": "0038cd9ee8b1f266df2e1842da768faac6a28ae73336a55631a0738ddda64014"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/kubernetes-cli-1.19.0.mojave.bottle.tar.gz",
-              "sha256": "214b259580cd5d9c0a4c97c5bc56931a3ae86a035ce0c67bc1c12671bcb4f175"
+              "url": "https://homebrew.bintray.com/bottles/kubernetes-cli-1.19.1.mojave.bottle.tar.gz",
+              "sha256": "09fc4442ff78ea737f343e25c22fa9dbd30b4e84fe2f407e1b6d9ba82b41dae4"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/kubernetes-cli-1.19.0.high_sierra.bottle.tar.gz",
-              "sha256": "b5a5d643326f9301164e1167d9ad21d9657a55da697da761cf5feb42be629ca2"
+              "url": "https://homebrew.bintray.com/bottles/kubernetes-cli-1.19.1.high_sierra.bottle.tar.gz",
+              "sha256": "92c1c37bd26196b8eea55418ee31f418ebe0a41bc4ad024198ad175050eef818"
             }
           }
         }
@@ -320,22 +320,22 @@
         }
       },
       "node": {
-        "version": "14.9.0",
+        "version": "14.10.1",
         "bottle": {
           "cellar": ":any",
           "prefix": "/usr/local",
           "files": {
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/node-14.9.0.catalina.bottle.tar.gz",
-              "sha256": "df9d87a46dfa38140b2742ab1b00121825b92aabbcd98be2b8c7b4900752f749"
+              "url": "https://homebrew.bintray.com/bottles/node-14.10.1.catalina.bottle.tar.gz",
+              "sha256": "b4ea8fed48e2880c27d827d23146d81e0fc6768e88d982d134fbb5b97d747cd3"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/node-14.9.0.mojave.bottle.tar.gz",
-              "sha256": "f9c186c264f8b4511b981a7332ffaddd6e58cab2276c45e87c0e75d35a55e43f"
+              "url": "https://homebrew.bintray.com/bottles/node-14.10.1.mojave.bottle.tar.gz",
+              "sha256": "165646d2fc629d2afc9afda44fd4c467310ed182d31e58e819133c2f6c49b028"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/node-14.9.0.high_sierra.bottle.tar.gz",
-              "sha256": "2996971a08a2db37f99390a82e5c94850f8dca1006827ce9669ec96bd249b64e"
+              "url": "https://homebrew.bintray.com/bottles/node-14.10.1.high_sierra.bottle.tar.gz",
+              "sha256": "626b3d79f27718ea2e0749ac6a682cb432784910c24d456b4273db7ce8a3d21f"
             }
           }
         }
@@ -485,6 +485,27 @@
       "zsh-autosuggestions": {
         "version": "0.6.4",
         "bottle": false
+      },
+      "terraform@0.12": {
+        "version": "0.12.29",
+        "bottle": {
+          "cellar": ":any_skip_relocation",
+          "prefix": "/usr/local",
+          "files": {
+            "catalina": {
+              "url": "https://homebrew.bintray.com/bottles/terraform%400.12-0.12.29.catalina.bottle.tar.gz",
+              "sha256": "6dd856617186380d96a3b277e6df15f9df0a929c44c1567e70cc1cff8fcc58e3"
+            },
+            "mojave": {
+              "url": "https://homebrew.bintray.com/bottles/terraform%400.12-0.12.29.mojave.bottle.tar.gz",
+              "sha256": "6dd856617186380d96a3b277e6df15f9df0a929c44c1567e70cc1cff8fcc58e3"
+            },
+            "high_sierra": {
+              "url": "https://homebrew.bintray.com/bottles/terraform%400.12-0.12.29.high_sierra.bottle.tar.gz",
+              "sha256": "6dd856617186380d96a3b277e6df15f9df0a929c44c1567e70cc1cff8fcc58e3"
+            }
+          }
+        }
       }
     },
     "mas": {
@@ -495,7 +516,7 @@
       },
       "Todoist": {
         "id": "585829637",
-        "version": "7.3.3"
+        "version": "7.3.4"
       },
       "ToothFairy": {
         "id": "1191449274",
@@ -518,9 +539,9 @@
   "system": {
     "macos": {
       "catalina": {
-        "HOMEBREW_VERSION": "2.4.16",
+        "HOMEBREW_VERSION": "2.5.0",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "0687baaf14e7b16c383d101fcc3b954cfb05ffe8",
+        "Homebrew/homebrew-core": "ea9dc88e6ceb5b9f5822e7f44b59f73ddf182178",
         "CLT": "12.0.26.2",
         "Xcode": "12.0",
         "macOS": "10.15.6"

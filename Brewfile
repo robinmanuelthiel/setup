@@ -6,7 +6,7 @@ tap "homebrew/cask-drivers"
 
 # Development
 brew "azure-cli"
-brew "terraform"
+brew "terraform@0.12"
 cask "iterm2"
 cask "visual-studio-code"
 cask "dotnet-sdk"
