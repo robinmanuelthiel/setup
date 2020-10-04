@@ -50,6 +50,7 @@ cask "airserver"
 mas "Microsoft Remote Desktop", id: 1295203466
 cask "sonos"
 cask "obs"
+mas "Habitify", id: 1111447047
 
 # macOS Tools
 mas "Magent", id: 441258766
