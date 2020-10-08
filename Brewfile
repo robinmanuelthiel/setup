@@ -3,6 +3,7 @@ tap "homebrew/cask"
 tap "homebrew/core"
 tap "romkatv/powerlevel10k"
 tap "homebrew/cask-drivers"
+tap "azure/functions"
 
 # Development
 brew "azure-cli"
@@ -25,6 +26,7 @@ brew "fzf"
 brew "jq"
 cask "postman"
 cask "google-cloud-sdk"
+brew "azure-functions-core-tools"
 
 # Design
 cask "figma"
