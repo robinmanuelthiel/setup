@@ -7,7 +7,7 @@ tap "azure/functions"
 
 # Development
 brew "azure-cli"
-brew "terraform@0.12"
+brew "terraform"
 cask "iterm2"
 cask "visual-studio-code"
 cask "dotnet-sdk"

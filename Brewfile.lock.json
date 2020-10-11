@@ -5,16 +5,16 @@
         "revision": "394732eda2af23ce7db1f59f79e9bb7d3727f1e2"
       },
       "homebrew/cask": {
-        "revision": "3fb5c44de1e3ef3a1e996f15cb3eb60af4e4adfc"
+        "revision": "e736dc9b54451212a4be9d4672fa9b1470535a6f"
       },
       "homebrew/core": {
-        "revision": "105457ac1eb2e3a05d23317d54fadc8a60176349"
+        "revision": "8bcd0e3722ba050928900e5ee7182d5d8b1bd7a1"
       },
       "romkatv/powerlevel10k": {
         "revision": "f5858bc166b564dadd7b5d84e9ac91da7714c83c"
       },
       "homebrew/cask-drivers": {
-        "revision": "c432d7371266c40edc7bb0fd13ba01b3463a6cfc"
+        "revision": "f887621063b189660f40723f412f4d636720d5e4"
       },
       "azure/functions": {
         "revision": "4a449c494d062e26cf9b1224d6aa6cfc7ecbce70"
@@ -237,22 +237,22 @@
         }
       },
       "terraform": {
-        "version": "0.13.1",
+        "version": "0.13.4",
         "bottle": {
           "cellar": ":any_skip_relocation",
           "prefix": "/usr/local",
           "files": {
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/terraform-0.13.1.catalina.bottle.tar.gz",
-              "sha256": "cfe7702b6b8d0f41367fd3f04156d45b9dcb159318c7dec576f0afe2221fb895"
+              "url": "https://homebrew.bintray.com/bottles/terraform-0.13.4.catalina.bottle.tar.gz",
+              "sha256": "05e7bf567f54c8396df8cf90470e573f5b08ebe8920bad1e638f531a54a152b6"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/terraform-0.13.1.mojave.bottle.tar.gz",
-              "sha256": "cebd4365592a856549332e30e3a7fc64580f292126d528bdd97866c352147196"
+              "url": "https://homebrew.bintray.com/bottles/terraform-0.13.4.mojave.bottle.tar.gz",
+              "sha256": "e1a7f05f31ad593a8d6822cd410872cccb513b2d9d5535a33b7a489ffc21e206"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/terraform-0.13.1.high_sierra.bottle.tar.gz",
-              "sha256": "d5dce7756740ca08e55799f9d694d14847b9ff5f107fc0c7ae64459e34f6422c"
+              "url": "https://homebrew.bintray.com/bottles/terraform-0.13.4.high_sierra.bottle.tar.gz",
+              "sha256": "ffc0d620e8b3ec23b0265ff4b46aa1158b9149cd05210c2da498b6ac1bc4b9aa"
             }
           }
         }
@@ -545,7 +545,7 @@
       },
       "Microsoft Remote Desktop": {
         "id": "1295203466",
-        "version": "10.4.0"
+        "version": "10.4.1"
       },
       "Habitify": {
         "id": "1111447047",
@@ -556,9 +556,9 @@
   "system": {
     "macos": {
       "catalina": {
-        "HOMEBREW_VERSION": "2.5.4",
+        "HOMEBREW_VERSION": "2.5.5",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "105457ac1eb2e3a05d23317d54fadc8a60176349",
+        "Homebrew/homebrew-core": "8bcd0e3722ba050928900e5ee7182d5d8b1bd7a1",
         "CLT": "12.0.26.2",
         "Xcode": "12.0",
         "macOS": "10.15.7"
