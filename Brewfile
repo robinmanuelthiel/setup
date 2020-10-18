@@ -26,7 +26,7 @@ brew "fzf"
 brew "jq"
 cask "postman"
 cask "google-cloud-sdk"
-brew "azure-functions-core-tools"
+brew "azure-functions-core-tools@3"
 
 # Design
 cask "figma"
