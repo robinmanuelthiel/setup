@@ -5,19 +5,22 @@
         "revision": "78513292658ff002a6a816bdeb9d286150ee1a16"
       },
       "homebrew/cask": {
-        "revision": "79aa56345a6ab9a7f82ecfc623f8db984c13942b"
+        "revision": "e003fdd875d2c1ec7807fd9b6ebae2049752cbae"
       },
       "homebrew/core": {
-        "revision": "4af087c43306cef4b5b55db9f15b09cf3b296813"
+        "revision": "32dce0504876219eed83b76a3f9f09e9352f3bb3"
       },
       "romkatv/powerlevel10k": {
         "revision": "f5858bc166b564dadd7b5d84e9ac91da7714c83c"
       },
       "homebrew/cask-drivers": {
-        "revision": "8bc40916f3c65d452426aee8da965f75d354fa31"
+        "revision": "6a233b189451b8f053ec88490b77cf1c2bd767aa"
       },
       "azure/functions": {
         "revision": "4a449c494d062e26cf9b1224d6aa6cfc7ecbce70"
+      },
+      "dapr/tap": {
+        "revision": "e5acd88dd6242b29c371d324524b78fb60331574"
       }
     },
     "cask": {
@@ -523,6 +526,40 @@
       "azure-functions-core-tools@3": {
         "version": "3.0.2931",
         "bottle": false
+      },
+      "dapr-cli": {
+        "version": "0.11.0",
+        "bottle": {
+          "cellar": ":any_skip_relocation",
+          "prefix": "/usr/local",
+          "files": {
+            "catalina": {
+              "url": "https://github.com/dapr/homebrew-tap/releases/download/v0.11.0/dapr-cli-0.11.0.catalina.bottle.tar.gz",
+              "sha256": "6db2f36609f71c21e788c9001728c048240addd598e68b341e311ebf795335c6"
+            }
+          }
+        }
+      },
+      "go": {
+        "version": "1.15.3",
+        "bottle": {
+          "cellar": "/usr/local/Cellar",
+          "prefix": "/usr/local",
+          "files": {
+            "catalina": {
+              "url": "https://homebrew.bintray.com/bottles/go-1.15.3.catalina.bottle.tar.gz",
+              "sha256": "6bd0119a31c1ae26831105490a67b97bed5d0fd2c6ad140cdf4c84aa7a315af2"
+            },
+            "mojave": {
+              "url": "https://homebrew.bintray.com/bottles/go-1.15.3.mojave.bottle.tar.gz",
+              "sha256": "6251ba0acffd00c58adb27bdeeb68213ec7723da54d83581272fa19f82a21137"
+            },
+            "high_sierra": {
+              "url": "https://homebrew.bintray.com/bottles/go-1.15.3.high_sierra.bottle.tar.gz",
+              "sha256": "48df8ba509f14e4f28236fc74217233d62ab352a2f4db673c5081c163d92a35b"
+            }
+          }
+        }
       }
     },
     "mas": {
@@ -562,7 +599,7 @@
       "catalina": {
         "HOMEBREW_VERSION": "2.5.6",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "4af087c43306cef4b5b55db9f15b09cf3b296813",
+        "Homebrew/homebrew-core": "32dce0504876219eed83b76a3f9f09e9352f3bb3",
         "CLT": "12.0.26.2",
         "Xcode": "12.0",
         "macOS": "10.15.7"
