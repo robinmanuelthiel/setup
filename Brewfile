@@ -6,6 +6,7 @@ tap "homebrew/cask-drivers"
 tap "azure/functions"
 tap "azure/kubelogin"
 tap "dapr/tap"
+tap "isen-ng/dotnet-sdk-versions"
 
 # Development
 brew "azure-cli"
@@ -13,6 +14,7 @@ brew "terraform"
 cask "iterm2"
 cask "visual-studio-code"
 cask "dotnet-sdk"
+cask "dotnet-sdk3-1-400"
 brew "kubernetes-cli"
 brew "kubectx"
 brew "kube-ps1"
@@ -58,6 +60,7 @@ mas "Microsoft Remote Desktop", id: 1295203466
 cask "sonos"
 cask "obs"
 mas "Habitify", id: 1111447047
+mas "Trello", id: 1278508951
 
 # macOS Tools
 mas "Magent", id: 441258766
