@@ -7,6 +7,7 @@ tap "azure/functions"
 tap "azure/kubelogin"
 tap "dapr/tap"
 tap "isen-ng/dotnet-sdk-versions"
+tap "FairwindsOps/tap"
 
 # Development
 brew "azure-cli"
@@ -19,6 +20,7 @@ brew "kubernetes-cli"
 brew "kubectx"
 brew "kube-ps1"
 brew "kubelogin"
+brew "rbac-lookup"
 brew "openshift-cli"
 brew "helm"
 brew "node@14"
@@ -34,11 +36,22 @@ cask "google-cloud-sdk"
 brew "azure-functions-core-tools@3"
 brew "dapr-cli"
 brew "go"
+brew "nuget"
+
+# Mobile Development
+cask "adoptopenjdk8"
+cask "android-studio"
+cask "visual-studio"
+cask "xamarin"
+cask "xamarin-ios"
+cask "xamarin-android"
+mas "Xcode", id: 497799835
 
 # Design
 cask "figma"
 cask "sketch"
 cask "ultimaker-cura"
+cask "drawio"
 
 # Essentials
 cask "google-chrome"
@@ -75,6 +88,7 @@ cask "karabiner-elements"
 # Driver
 cask "logitech-options"
 cask "displaylink"
+cask "fujitsu-scansnap-home"
 
 # Shell
 brew "romkatv/powerlevel10k/powerlevel10k"

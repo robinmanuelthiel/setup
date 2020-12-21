@@ -8,18 +8,7 @@ brew bundle -f Brewfile
 
 ## Configure tools
 
-### Karabiner-Elements
-
-![](img/karabiner-1.png)
-
-![](img/karabiner-2.png)
-
-## What needs to be installed manually
-
-- [Global Protect](https://microsoft.sharepoint.com/sites/Network_Connectivity/SitePages/RemoteAccess/GlobalProtect-Desktop-VPN-app-for-Mac.aspx)
-- [Audacity](https://www.audacityteam.org/)
-
-## Configure command line
+### Command line
 
 ```bash
 # Install Oh My ZSH
@@ -35,3 +24,22 @@ Open Shell to install the correct font. All other settings will be overwritten l
 ```bash
 cp .p10k.zsh ~
 ```
+
+### Xcode
+
+Needs to be started once to accept the license.
+
+### Android Studio
+
+Needs to be started once to install and configure the Android SDK tools
+
+### Karabiner-Elements
+
+![](img/karabiner-1.png)
+
+![](img/karabiner-2.png)
+
+## What needs to be installed manually
+
+- [Global Protect](https://microsoft.sharepoint.com/sites/Network_Connectivity/SitePages/RemoteAccess/GlobalProtect-Desktop-VPN-app-for-Mac.aspx)
+- [Audacity](https://www.audacityteam.org/)
