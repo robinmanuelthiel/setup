@@ -37,6 +37,9 @@ brew "azure-functions-core-tools@3"
 brew "dapr-cli"
 brew "go"
 brew "nuget"
+cask "fritzing"
+cask "arduino"
+brew "python@3.8" # Newer Python version are blocked by https://github.com/digidotcom/xbee-python/issues/218
 
 # Mobile Development
 cask "adoptopenjdk8"
@@ -74,6 +77,7 @@ cask "sonos"
 cask "obs"
 mas "Habitify", id: 1111447047
 mas "Trello", id: 1278508951
+cask "signal"
 
 # macOS Tools
 mas "Magent", id: 441258766
