@@ -9,6 +9,7 @@ tap "dapr/tap"
 tap "isen-ng/dotnet-sdk-versions"
 tap "FairwindsOps/tap"
 tap "ory/kratos"
+tap "ory/hydra"
 
 # Development
 brew "azure-cli"
@@ -45,6 +46,7 @@ cask "arduino"
 brew "python@3.8" # Newer Python version are blocked by https://github.com/digidotcom/xbee-python/issues/218
 brew "typescript"
 brew "kratos"
+brew "ory/hydra/hydra"
 
 # Mobile Development
 cask "adoptopenjdk8"
@@ -83,6 +85,8 @@ cask "obs"
 mas "Habitify", id: 1111447047
 mas "Trello", id: 1278508951
 cask "signal"
+brew "watch"
+brew "wget"
 
 # macOS Tools
 mas "Magent", id: 441258766
