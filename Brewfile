@@ -47,6 +47,7 @@ brew "python@3.8" # Newer Python version are blocked by https://github.com/digid
 brew "typescript"
 brew "kratos"
 brew "ory/hydra/hydra"
+cask "azure-data-studio"
 
 # Mobile Development
 cask "adoptopenjdk8"
