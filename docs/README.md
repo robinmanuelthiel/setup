@@ -1,5 +1,11 @@
 # Setting up a new machine
 
+## Install brew bundle
+
+```bash
+brew bundle
+```
+
 ## Install tools with homebrew
 
 ```bash
