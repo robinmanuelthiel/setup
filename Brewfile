@@ -88,6 +88,7 @@ mas "Trello", id: 1278508951
 cask "signal"
 brew "watch"
 brew "wget"
+brew "watchman"
 
 # macOS Tools
 mas "Magent", id: 441258766
