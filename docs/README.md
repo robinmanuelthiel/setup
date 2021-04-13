@@ -9,7 +9,7 @@ brew bundle
 ## Install tools with homebrew
 
 ```bash
-brew bundle -f Brewfile
+brew bundle --file Brewfile
 ```
 
 ## Configure tools
@@ -24,8 +24,13 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 cp .zshrc ~
 ```
 
-Open Shell to install the correct font. All other settings will be overwritten later.
+Open Shell to install the correct font. (All other settings will be overwritten later.) If it doesn't ask you for a font, you can run
 
+```bash
+p10k config
+```
+
+Copy the Powerlevel10k config over
 
 ```bash
 cp .p10k.zsh ~
