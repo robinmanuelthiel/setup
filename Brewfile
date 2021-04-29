@@ -48,6 +48,7 @@ brew "typescript"
 brew "kratos"
 brew "ory/hydra/hydra"
 cask "azure-data-studio"
+brew "act"
 
 # Mobile Development
 cask "adoptopenjdk8"
