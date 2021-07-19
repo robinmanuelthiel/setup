@@ -10,6 +10,7 @@ tap "isen-ng/dotnet-sdk-versions"
 tap "FairwindsOps/tap"
 tap "ory/kratos"
 tap "ory/hydra"
+tap "gitguardian/ggshield"
 
 # Development
 brew "azure-cli"
@@ -19,13 +20,6 @@ cask "visual-studio-code"
 cask "dotnet-sdk"
 cask "dotnet-sdk3-1-400"
 cask "dotnet-sdk3-1-300"
-brew "kubernetes-cli"
-brew "kubectx"
-brew "kube-ps1"
-brew "kubelogin"
-brew "rbac-lookup"
-brew "openshift-cli"
-brew "helm"
 brew "node@14", link: true
 brew "yarn"
 cask "github"
@@ -43,12 +37,24 @@ brew "go"
 brew "nuget"
 cask "fritzing"
 cask "arduino"
-brew "python@3.8" # Newer Python version are blocked by https://github.com/digidotcom/xbee-python/issues/218
+brew "python"
 brew "typescript"
 brew "kratos"
 brew "ory/hydra/hydra"
 cask "azure-data-studio"
 brew "act"
+#brew "ggshield" # Does not work currently: https://github.com/GitGuardian/homebrew-ggshield/issues/1
+
+# Kubernetes
+brew "kubernetes-cli"
+brew "kubectx"
+brew "kube-ps1"
+brew "kubelogin"
+brew "velero"
+brew "rbac-lookup"
+brew "openshift-cli"
+brew "helm"
+brew "minikube"
 
 # Mobile Development
 cask "adoptopenjdk8"
