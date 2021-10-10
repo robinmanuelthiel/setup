@@ -44,17 +44,20 @@ brew "ory/hydra/hydra"
 cask "azure-data-studio"
 brew "act"
 #brew "ggshield" # Does not work currently: https://github.com/GitGuardian/homebrew-ggshield/issues/1
+brew "graphviz"
 
 # Kubernetes
 brew "kubernetes-cli"
 brew "kubectx"
 brew "kube-ps1"
 brew "kubelogin"
+brew "krew"
 brew "velero"
 brew "rbac-lookup"
 brew "openshift-cli"
 brew "helm"
 brew "minikube"
+brew "linkerd"
 
 # Mobile Development
 cask "adoptopenjdk8"
