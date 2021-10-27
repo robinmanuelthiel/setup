@@ -6,7 +6,7 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-## Install tools with homebrew
+## Install all other applications with homebrew
 
 ```bash
 brew bundle --file Brewfile
