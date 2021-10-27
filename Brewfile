@@ -12,10 +12,24 @@ tap "ory/kratos"
 tap "ory/hydra"
 tap "gitguardian/ggshield"
 
-# Development
+# CLI
+brew "tree"
+brew "gettext", link: true # for envsubst
+brew "fzf"
+brew "jq"
+brew "watch"
+brew "wget"
+brew "watchman"
+brew "romkatv/powerlevel10k/powerlevel10k"
+brew "zsh-syntax-highlighting"
+brew "zsh-autosuggestions"
+
+# Cloud
 brew "azure-cli"
 brew "terraform"
-cask "iterm2"
+cask "google-cloud-sdk"
+
+# Development
 cask "visual-studio-code"
 cask "dotnet-sdk"
 cask "dotnet-sdk3-1-400"
@@ -25,12 +39,7 @@ brew "yarn"
 cask "github"
 cask "docker"
 cask "powershell"
-brew "tree"
-brew "gettext", link: true # for envsubst
-brew "fzf"
-brew "jq"
 cask "postman"
-cask "google-cloud-sdk"
 brew "azure-functions-core-tools@3"
 brew "dapr-cli"
 brew "go"
@@ -43,7 +52,7 @@ brew "kratos"
 brew "ory/hydra/hydra"
 cask "azure-data-studio"
 brew "act"
-#brew "ggshield" # Does not work currently: https://github.com/GitGuardian/homebrew-ggshield/issues/1
+brew "ggshield" # Does not work currently: https://github.com/GitGuardian/homebrew-ggshield/issues/1
 brew "graphviz"
 
 # Kubernetes
@@ -74,7 +83,8 @@ cask "sketch"
 cask "ultimaker-cura"
 cask "drawio"
 
-# Essentials
+# Applications
+cask "iterm2"
 cask "google-chrome"
 cask "firefox"
 cask "slack"
@@ -93,12 +103,8 @@ cask "airserver"
 mas "Microsoft Remote Desktop", id: 1295203466
 cask "sonos"
 cask "obs"
-mas "Habitify", id: 1111447047
 mas "Trello", id: 1278508951
 cask "signal"
-brew "watch"
-brew "wget"
-brew "watchman"
 
 # macOS Tools
 mas "Magent", id: 441258766
@@ -110,12 +116,7 @@ mas "Dato", id: 1470584107
 mas "Display Menu", id: 549083868
 cask "karabiner-elements"
 
-# Driver
+# Drivers
 cask "logitech-options"
 cask "displaylink"
 cask "fujitsu-scansnap-home"
-
-# Shell
-brew "romkatv/powerlevel10k/powerlevel10k"
-brew "zsh-syntax-highlighting"
-brew "zsh-autosuggestions"
