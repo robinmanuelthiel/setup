@@ -50,6 +50,10 @@ Needs to be started once to install and configure the Android SDK tools
 
 ![](img/karabiner-2.png)
 
+### iTerm
+
+Allow Option + Arrow
+
 ## What needs to be installed manually
 
 - [Global Protect](https://microsoft.sharepoint.com/sites/Network_Connectivity/SitePages/RemoteAccess/GlobalProtect-Desktop-VPN-app-for-Mac.aspx)
