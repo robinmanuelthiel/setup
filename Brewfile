@@ -26,6 +26,7 @@ brew "zsh-autosuggestions"
 
 # Cloud
 brew "azure-cli"
+cask "microsoft-azure-storage-explorer"
 brew "terraform"
 cask "google-cloud-sdk"
 
@@ -105,6 +106,7 @@ cask "sonos"
 cask "obs"
 mas "Trello", id: 1278508951
 cask "signal"
+cask "infinity"
 
 # macOS Tools
 mas "Magent", id: 441258766
