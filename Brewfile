@@ -26,6 +26,7 @@ brew "zsh-autosuggestions"
 
 # Cloud
 brew "azure-cli"
+cask "microsoft-azure-storage-explorer"
 brew "terraform"
 cask "google-cloud-sdk"
 
