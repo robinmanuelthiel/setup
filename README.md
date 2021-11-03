@@ -29,7 +29,7 @@ cp .zsh™rc ~
 Open Shell to install the correct font. (All other settings will be overwritten later.) If it doesn't ask you for a font, you can run
 
 ```bash
-p10k config
+p10k configure
 ```
 
 Copy the Powerlevel10k config over
