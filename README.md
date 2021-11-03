@@ -56,6 +56,12 @@ Needs to be started once to install and configure the Android SDK tools
 
 Allow Option + Arrow
 
+### Spotlight
+
+To increase performance and reduce battery drain, remove the folder where you store the source code from Spotlight indexing.
+
+<img width="780" alt="spotlight" src="https://user-images.githubusercontent.com/5874465/140032291-fdcf6c0d-c9c8-4df6-bb1e-e1c893a1ac9f.png">
+
 ## What needs to be installed manually
 
 - [Global Protect](https://microsoft.sharepoint.com/sites/Network_Connectivity/SitePages/RemoteAccess/GlobalProtect-Desktop-VPN-app-for-Mac.aspx)
