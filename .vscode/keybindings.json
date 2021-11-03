@@ -1,0 +1,23 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+  {
+    "key": "shift+cmd+7",
+    "command": "-coverage-gutters.displayCoverage"
+  },
+  {
+    "key": "shift+cmd+6",
+    "command": "-coverage-gutters.previewCoverageReport"
+  },
+  {
+    "key": "shift+cmd+0",
+    "command": "-coverage-gutters.removeCoverage"
+  },
+  {
+    "key": "shift+cmd+9",
+    "command": "-coverage-gutters.removeWatch"
+  },
+  {
+    "key": "shift+cmd+8",
+    "command": "-coverage-gutters.watchCoverageAndVisibleEditors"
+  }
+]
