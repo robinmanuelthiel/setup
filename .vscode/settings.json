@@ -1,127 +1,81 @@
 {
-    "window.zoomLevel": 0,
-    "tslint.alwaysShowRuleFailuresAsWarnings": true,
-    "workbench.iconTheme": "material-icon-theme",
-    "editor.rulers": [
-      120
-    ],
-    "cSpell.enabledLanguageIds": [
-      "asciidoc",
-      "c",
-      "cpp",
-      "csharp",
-      "css",
-      "go",
-      "handlebars",
-      "html",
-      "jade",
-      "javascript",
-      "javascriptreact",
-      "latex",
-      "less",
-      "markdown",
-      "php",
-      "plaintext",
-      "pub",
-      "python",
-      "restructuredtext",
-      "rust",
-      "scss",
-      "text",
-      "typescript",
-      "typescriptreact",
-      "yml"
-    ],
-    "git.autofetch": true,
-    "cosmosDB.showSavePrompt": false,
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "explorer.confirmDragAndDrop": false,
-    "vs-kubernetes": {
-      "vs-kubernetes.minikube-path": "/Users/robinmanuelthiel/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
-      "vs-kubernetes.draft-path": "/Users/robinmanuelthiel/.vs-kubernetes/tools/draft/darwin-amd64/draft",
-      "vs-kubernetes.minikube-path.mac": "/Users/robinmanuelthiel/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
-    },
-    "git.enableSmartCommit": true,
-    "editor.wrappingIndent": "none",
-    "team.showWelcomeMessage": false,
-    "files.insertFinalNewline": true,
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "dotnet-test-explorer.autoExpandTree": true,
-    "dotnet-test-explorer.autoWatch": true,
-    "cSpell.allowCompoundWords": true,
-    "liveshare.showInStatusBar": "whileCollaborating",
-    "cSpell.showStatus": false,
-    // Code Coverage
-    "coverage-gutters.showGutterCoverage": false,
-    "coverage-gutters.showLineCoverage": true,
-    "coverage-gutters.showRulerCoverage": true,
-    "editor.fontSize": 13,
-    "debug.console.fontSize": 13,
-    "editor.formatOnSave": true,
-    "editor.renderWhitespace": "none",
-    "taskExplorer.enableSideBar": true,
-    "taskExplorer.enableExplorerView": false,
-    "sync.gist": "563ad26969dcf039d83bcd3ad979eed6",
-    "breadcrumbs.enabled": true,
-    "csharpextensions.useThisForCtorAssignments": false,
-    "cSpell.userWords": [
-      "Kubernetes"
-    ],
-    "[json]": {
-      "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "docker.defaultRegistryPath": "contosomaintenanceregistry.azurecr.io",
-    "omnisharp.enableRoslynAnalyzers": true,
-    "liveshare.featureSet": "insiders",
-    "explorer.autoReveal": false,
-    "workbench.sideBar.location": "left",
-    "sync.autoUpload": true,
-    "azure.resourceFilter": [
-      "ea33664c-018c-4782-a617-1cc37bec8b2a/781b01b5-9d47-4b4a-bcdd-b24d9f479fd2",
-      "72f988bf-86f1-41af-91ab-2d7cd011db47/0ec6dbb0-b89b-4bb3-9140-14e3d244e0ee",
-      "72f988bf-86f1-41af-91ab-2d7cd011db47/f176cb8a-43d5-4490-9d2b-5ef5fcb7bf95",
-      "df222e8e-a470-4941-b075-22bcfca7d659/f14b31e7-6909-40d5-81c3-3aecffdf49b0",
-      "ea33664c-018c-4782-a617-1cc37bec8b2a/f3957873-3134-4def-9380-b93ad9d4a935"
-    ],
-    "sync.forceUpload": true,
-    "terraform.indexing": {
-      "enabled": false,
-      "liveIndexing": false,
-      "delay": 500,
-      "exclude": [
-        ".terraform/**/*",
-        "**/.terraform/**/*"
-      ]
-    },
-    "terraform.languageServer": {
-      "external": true,
-      "args": [
-        "serve"
-      ]
-    },
-    "terminal.integrated.shell.osx": "/bin/zsh",
-    "workbench.startupEditor": "welcomePage",
-    "yaml.format.singleQuote": true,
-    "debug.onTaskErrors": "debugAnyway",
-    "explorer.compactFolders": false,
-    "todo-tree.general.revealBehaviour": "end of todo",
-    "todo-tree.highlights.enabled": false,
-    "todo-tree.regex.regexCaseSensitive": false,
-    "todo-tree.tree.showScanModeButton": false,
-    "terminal.integrated.fontFamily": "MesloLGS NF",
-    "terminal.integrated.fontSize": 14,
-    "editor.minimap.enabled": false,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "vsonline.authentication.accountProvider": "Microsoft",
-    "vsonline.accountProvider": "Microsoft",
-    "prettier.requireConfig": true,
-    "codespaces.accountProvider": "Microsoft",
-    "arduino.path": "/Applications",
-    "python.jediEnabled": false,
-    "workbench.colorTheme": "Dracula",
-    "python.languageServer": "Microsoft",
-    "cSpell.language": "en,de",
-    "editor.tokenColorCustomizations": null
-  }
+  // Styling
+  "workbench.colorTheme": "Dracula",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontSize": 13,
+  "debug.console.fontSize": 13,
+  "editor.renderWhitespace": "none",
+  "breadcrumbs.enabled": true,
+
+  // Editor settings
+  "editor.tabSize": 2,
+  "editor.wrappingIndent": "none",
+  "editor.bracketPairColorization.enabled": true,
+  "files.insertFinalNewline": true,
+  "editor.rulers": [
+    120
+  ],
+  "explorer.compactFolders": false,
+  "explorer.autoReveal": false,
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "editor.suggestSelection": "first",
+  "files.associations": {
+    ".prettierrc": "yaml"
+  },
+  "editor.inlineSuggest.enabled": true,
+  "explorer.confirmDragAndDrop": false,
   
+  // Terminal settings
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.integrated.fontSize": 14,
+
+  // Formatters
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[terraform]": {
+    "editor.defaultFormatter": "hashicorp.terraform"
+  },
+  "[csharp]": {
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "ms-dotnettools.csharp"
+  },
+
+  // Extensions
+  "cSpell.language": "en,de",
+  "cSpell.showStatus": false,
+  "cSpell.allowCompoundWords": true,
+  "cSpell.ignorePaths": [
+    "**/package-lock.json",
+    "**/node_modules/**",
+    "**/vscode-extension/**",
+    "**/.git/objects/**",
+    ".vscode",
+    ".vscode-insiders",
+    "yarn.lock"
+  ],
+  "omnisharp.enableRoslynAnalyzers": true,
+  "omnisharp.enableImportCompletion": true,
+  "omnisharp.organizeImportsOnFormat": true,
+  "csharpextensions.useThisForCtorAssignments": false,
+  "coverage-gutters.showGutterCoverage": false,
+  "coverage-gutters.showLineCoverage": true,
+  "coverage-gutters.showRulerCoverage": true,
+  "taskExplorer.enableSideBar": true,
+  "taskExplorer.enableExplorerView": false,
+  "todo-tree.regex.regexCaseSensitive": false,
+  "redhat.telemetry.enabled": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+    
+  // Not really sure, what that does:
+  // "terraform.languageServer": {
+  //   "external": true,
+  //   "args": [
+  //     "serve"
+  //   ]
+  // },
+}
