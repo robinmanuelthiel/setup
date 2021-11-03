@@ -44,6 +44,13 @@ When using Visual Studio Code, add the following settings to enable the correct 
 "terminal.integrated.fontFamily": "MesloLGS NF",
 ```
 
+### Visual Studio Code
+
+1. Login to Visual Studio Code with your GitHub Account and enable Settings Sync
+2. If not already in the settings, copy the content of `.vscode/settings.json` to the settings JSON, which can be opened with (`CMD+Shift+P` -> `Preferences: Open Settings (JSON)`)
+3. If not already in the key bindings, copy the content of `.vscode/keybindings.json` to the keybindings JSON, which can be opened with (`CMD+Shift+P` -> `Preferences: Open Keyboard Shortcuts (JSON)`)
+4. Open this repository in Visual Studio code and install the recommened extensions
+
 ### Xcode
 
 Needs to be started once to accept the license.
