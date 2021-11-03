@@ -38,6 +38,12 @@ Copy the Powerlevel10k config over
 cp .p10k.zsh ~
 ```
 
+When using Visual Studio Code, add the following settings to enable the correct styling in your Terminal:
+
+```json
+"terminal.integrated.fontFamily": "MesloLGS NF",
+```
+
 ### Xcode
 
 Needs to be started once to accept the license.
