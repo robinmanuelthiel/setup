@@ -134,6 +134,9 @@ if [ /usr/local/bin/kubectl ]; then source <(kubectl completion zsh); fi
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export PATH="/usr/local/opt/node@12/bin:$PATH"
 
+# Daprd
+export PATH=$PATH:/$HOME/.dapr/bin
+
 #source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
