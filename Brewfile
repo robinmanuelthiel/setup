@@ -8,8 +8,7 @@ tap "azure/kubelogin"
 tap "dapr/tap"
 tap "isen-ng/dotnet-sdk-versions"
 tap "FairwindsOps/tap"
-tap "ory/kratos"
-tap "ory/hydra"
+tap "ory/tap"
 tap "gitguardian/ggshield"
 
 # CLI
@@ -50,7 +49,7 @@ cask "arduino"
 brew "python"
 brew "typescript"
 brew "kratos"
-brew "ory/hydra/hydra"
+brew "hydra"
 cask "azure-data-studio"
 brew "act"
 brew "ggshield" # Does not work currently: https://github.com/GitGuardian/homebrew-ggshield/issues/1
