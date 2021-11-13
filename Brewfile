@@ -27,13 +27,12 @@ brew "zsh-autosuggestions"
 brew "azure-cli"
 cask "microsoft-azure-storage-explorer"
 brew "terraform"
-cask "google-cloud-sdk"
 
 # Development
 cask "visual-studio-code"
 cask "dotnet-sdk"
+cask "dotnet-sdk5-0-400"
 cask "dotnet-sdk3-1-400"
-cask "dotnet-sdk3-1-300"
 brew "node@14", link: true
 brew "yarn"
 cask "github"
@@ -48,11 +47,11 @@ cask "fritzing"
 cask "arduino"
 brew "python"
 brew "typescript"
-brew "kratos"
+brew "ory/tap/kratos"
 brew "hydra"
 cask "azure-data-studio"
 brew "act"
-brew "ggshield" # Does not work currently: https://github.com/GitGuardian/homebrew-ggshield/issues/1
+brew "ggshield"
 brew "graphviz"
 
 # Kubernetes
