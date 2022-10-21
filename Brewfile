@@ -55,6 +55,7 @@ cask "azure-data-studio"
 brew "act"
 brew "ggshield"
 brew "graphviz"
+brew "openapi-generator"
 
 # Kubernetes
 brew "kubernetes-cli"
