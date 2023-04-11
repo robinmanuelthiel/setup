@@ -14,6 +14,14 @@ My personal collection of configuration files.
 brew bundle --file Brewfile
 ```
 
+## Install XCode
+
+The best way to install XCode is not via Store.
+
+1. [Download XCode](https://developer.apple.com/download/all/?q=Xcode)
+1. Run `xip -x Xcode_14.2.xip` to unzip
+1. Move the Xcode file to the Applications folder
+
 ## Configure tools
 
 ### Command line
@@ -23,7 +31,7 @@ brew bundle --file Brewfile
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Copy config
-cp .zsh™rc ~
+cp .zshrc ~
 ```
 
 Open Shell to install the correct font. (All other settings will be overwritten later.) If it doesn't ask you for a font, you can run
