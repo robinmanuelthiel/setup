@@ -22,6 +22,8 @@ The best way to install XCode is not via Store.
 1. Run `xip -x Xcode_14.2.xip` to unzip
 1. Move the Xcode file to the Applications folder
 
+Needs to be started once to accept the license.
+
 ## Configure tools
 
 ### Command line
@@ -58,10 +60,6 @@ When using Visual Studio Code, add the following settings to enable the correct 
 2. If not already in the settings, copy the content of `.vscode/settings.json` to the settings JSON, which can be opened with (`CMD+Shift+P` -> `Preferences: Open Settings (JSON)`)
 3. If not already in the key bindings, copy the content of `.vscode/keybindings.json` to the keybindings JSON, which can be opened with (`CMD+Shift+P` -> `Preferences: Open Keyboard Shortcuts (JSON)`)
 4. Open this repository in Visual Studio code and install the recommened extensions
-
-### Xcode
-
-Needs to be started once to accept the license.
 
 ### Android Studio
 
