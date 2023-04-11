@@ -24,6 +24,7 @@ brew "watchman"
 brew "romkatv/powerlevel10k/powerlevel10k"
 brew "zsh-syntax-highlighting"
 brew "zsh-autosuggestions"
+brew "thefuck"
 
 # Cloud
 brew "azure-cli"
@@ -35,7 +36,8 @@ cask "visual-studio-code"
 cask "dotnet-sdk"
 cask "dotnet-sdk5-0-400"
 cask "dotnet-sdk3-1-400"
-brew "node@14", link: true
+cask "dotnet-sdk6-0-400"
+brew "node@18", link: true
 brew "yarn"
 cask "github"
 cask "docker"
@@ -45,7 +47,6 @@ brew "azure-functions-core-tools@3"
 brew "dapr-cli"
 brew "go"
 brew "nuget"
-cask "fritzing"
 cask "arduino"
 brew "python"
 brew "typescript"
@@ -55,6 +56,7 @@ cask "azure-data-studio"
 brew "act"
 brew "ggshield"
 brew "graphviz"
+cask "visual-studio"
 
 # Kubernetes
 brew "kubernetes-cli"
@@ -71,17 +73,14 @@ brew "linkerd"
 brew "fluxcd/tap/flux"
 
 # Mobile Development
-cask "adoptopenjdk8"
-cask "android-studio"
-cask "visual-studio"
-cask "xamarin"
-cask "xamarin-ios"
-cask "xamarin-android"
-mas "Xcode", id: 497799835
+# cask "adoptopenjdk8"
+# cask "android-studio"
+# cask "xamarin"
+# cask "xamarin-ios"
+# cask "xamarin-android"
 
 # Design
 cask "figma"
-cask "sketch"
 cask "ultimaker-cura"
 cask "drawio"
 
@@ -93,9 +92,10 @@ cask "slack"
 cask "spotify"
 cask "microsoft-office"
 cask "microsoft-teams"
-mas "Microsoft OneNote", id: 784801555
+# mas "Microsoft OneNote", id: 784801555
 cask "skype"
 cask "whatsapp"
+cask "signal"
 cask "discord"
 cask "grammarly"
 mas "Todoist", id: 585829637
@@ -105,9 +105,8 @@ cask "airserver"
 mas "Microsoft Remote Desktop", id: 1295203466
 cask "sonos"
 cask "obs"
-mas "Trello", id: 1278508951
-cask "signal"
-cask "infinity"
+mas "Authenticator", id: 1538761576
+cask "bitwarden"
 
 # macOS Tools
 mas "Magent", id: 441258766
