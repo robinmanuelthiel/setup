@@ -57,6 +57,7 @@ brew "act"
 brew "ggshield"
 brew "graphviz"
 cask "visual-studio"
+brew "openapi-generator"
 
 # Kubernetes
 brew "kubernetes-cli"
