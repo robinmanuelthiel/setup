@@ -135,6 +135,10 @@ if [[ "$VSCODE_PID" = "" ]]; then
 
   # The fuck
   eval $(thefuck --alias)
+
+  # Option Keys
+  bindkey '[C' forward-word
+  bindkey '[D' backward-word
 fi
 
 alias k=kubectl

@@ -51,10 +51,9 @@ cask "arduino"
 brew "python"
 brew "typescript"
 brew "ory/tap/kratos"
-brew "ory/hydra/hydra"
+brew "ory/tap/hydra"
 cask "azure-data-studio"
 brew "act"
-brew "ggshield"
 brew "graphviz"
 cask "visual-studio"
 brew "openapi-generator"
@@ -88,6 +87,7 @@ cask "drawio"
 # Applications
 cask "iterm2"
 cask "google-chrome"
+cask "microsoft-edge"
 cask "firefox"
 cask "slack"
 cask "spotify"
@@ -108,6 +108,8 @@ cask "sonos"
 cask "obs"
 mas "Authenticator", id: 1538761576
 cask "bitwarden"
+cask "notion"
+cask "audacity"
 
 # macOS Tools
 mas "Magent", id: 441258766
