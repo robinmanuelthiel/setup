@@ -72,6 +72,7 @@ brew "helm"
 brew "minikube"
 brew "linkerd"
 brew "fluxcd/tap/flux"
+brew "kind"
 
 # Mobile Development
 # cask "adoptopenjdk8"
