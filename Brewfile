@@ -25,6 +25,7 @@ brew "romkatv/powerlevel10k/powerlevel10k"
 brew "zsh-syntax-highlighting"
 brew "zsh-autosuggestions"
 brew "thefuck"
+brew "mkcert"
 
 # Cloud
 brew "azure-cli"
@@ -50,13 +51,13 @@ brew "nuget"
 cask "arduino"
 brew "python"
 brew "typescript"
-brew "ory/tap/kratos"
-brew "ory/tap/hydra"
 cask "azure-data-studio"
 brew "act"
 brew "graphviz"
-cask "visual-studio"
 brew "openapi-generator"
+brew "gitlint"
+brew "pre-commit"
+
 
 # Kubernetes
 brew "kubernetes-cli"
@@ -110,6 +111,8 @@ mas "Authenticator", id: 1538761576
 cask "bitwarden"
 cask "notion"
 cask "audacity"
+cask "veracrypt"
+cask "elgato-stream-deck"
 
 # macOS Tools
 mas "Magent", id: 441258766
@@ -122,6 +125,6 @@ mas "Display Menu", id: 549083868
 cask "karabiner-elements"
 
 # Drivers
-cask "logitech-options"
+cask "logi-options-plus"
 cask "displaylink"
 cask "fujitsu-scansnap-home"
