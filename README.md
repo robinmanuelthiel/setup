@@ -48,18 +48,18 @@ Copy the Powerlevel10k config over
 cp .p10k.zsh ~
 ```
 
-When using Visual Studio Code, add the following settings to enable the correct styling in your Terminal:
+### Visual Studio Code
+
+1. log in to Visual Studio Code with your GitHub Account and enable Settings Sync
+2. If not already in the settings, copy the content of `.vscode/settings.json` to the settings JSON, which can be opened with (`CMD+Shift+P` -> `Preferences: Open Settings (JSON)`)
+3. If not already in the key bindings, copy the content of `.vscode/keybindings.json` to the keybindings JSON, which can be opened with (`CMD+Shift+P` -> `Preferences: Open Keyboard Shortcuts (JSON)`)
+4. Open this repository in Visual Studio code and install the recommended extensions
+
+Add the following settings to enable the correct styling for Powerlevel10k in your Terminal:
 
 ```json
 "terminal.integrated.fontFamily": "MesloLGS NF",
 ```
-
-### Visual Studio Code
-
-1. Login to Visual Studio Code with your GitHub Account and enable Settings Sync
-2. If not already in the settings, copy the content of `.vscode/settings.json` to the settings JSON, which can be opened with (`CMD+Shift+P` -> `Preferences: Open Settings (JSON)`)
-3. If not already in the key bindings, copy the content of `.vscode/keybindings.json` to the keybindings JSON, which can be opened with (`CMD+Shift+P` -> `Preferences: Open Keyboard Shortcuts (JSON)`)
-4. Open this repository in Visual Studio code and install the recommened extensions
 
 ### Android Studio
 
@@ -73,7 +73,7 @@ Needs to be started once to install and configure the Android SDK tools
 
 ### iTerm
 
-Allow Option + Arrow
+Allow Option + Arrow Keymappings: https://apple.stackexchange.com/a/293988
 
 ### Spotlight
 
