@@ -26,6 +26,7 @@ brew "zsh-syntax-highlighting"
 brew "zsh-autosuggestions"
 brew "thefuck"
 brew "mkcert"
+brew "cmatrix"
 
 # Cloud
 brew "azure-cli"
@@ -114,12 +115,13 @@ cask "notion"
 cask "audacity"
 cask "veracrypt"
 cask "elgato-stream-deck"
+cask "shureplus-motiv"
+cask "elgato-wave-link"
 
 # macOS Tools
 mas "Magent", id: 441258766
 cask "bartender"
 cask "spotmenu"
-brew "cmatrix"
 mas "ToothFairy", id: 1191449274
 mas "Dato", id: 1470584107
 mas "Display Menu", id: 549083868
@@ -127,5 +129,6 @@ cask "karabiner-elements"
 
 # Drivers
 cask "logi-options-plus"
+cask "logitune"
 cask "displaylink"
 cask "fujitsu-scansnap-home"
