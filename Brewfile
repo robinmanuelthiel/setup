@@ -114,9 +114,6 @@ cask "bitwarden"
 cask "notion"
 cask "audacity"
 cask "veracrypt"
-cask "elgato-stream-deck"
-cask "shureplus-motiv"
-cask "elgato-wave-link"
 
 # macOS Tools
 mas "Magent", id: 441258766
@@ -127,8 +124,12 @@ mas "Dato", id: 1470584107
 mas "Display Menu", id: 549083868
 cask "karabiner-elements"
 
-# Drivers
+# Drivers and special hardware tools
 cask "logi-options-plus"
 cask "logitune"
 cask "displaylink"
 cask "fujitsu-scansnap-home"
+cask "elgato-control-center"
+cask "elgato-stream-deck"
+cask "elgato-wave-link"
+cask "shureplus-motiv"
