@@ -17,9 +17,9 @@ brew bundle --file Brewfile
 After installing, the Brewfile, some additional steps need to be sorted out.
 
 ```bash
-# Manage multiple .NET versions
-brew install dotnet-sdk3-1-400
-# ...
+# To manage multiple .NET versions, reinstall the old ones
+brew reinstall dotnet-sdk3-1-400
+# brew reinstall dotnet-sdk...
 ```
 
 ```bash
