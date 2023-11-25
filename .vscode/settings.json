@@ -59,7 +59,6 @@
     "yarn.lock"
   ],
   "omnisharp.enableRoslynAnalyzers": true,
-  "omnisharp.enableImportCompletion": true,
   "omnisharp.organizeImportsOnFormat": true,
   "csharpextensions.useThisForCtorAssignments": false,
   "coverage-gutters.showGutterCoverage": false,
@@ -70,6 +69,7 @@
   "todo-tree.regex.regexCaseSensitive": false,
   "redhat.telemetry.enabled": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
+  "dotnet.completion.showCompletionItemsFromUnimportedNamespaces": true,
     
   // Not really sure, what that does:
   // "terraform.languageServer": {

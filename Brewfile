@@ -59,7 +59,6 @@ brew "openapi-generator"
 brew "gitlint"
 brew "pre-commit"
 
-
 # Kubernetes
 brew "kubernetes-cli"
 brew "kubectx"
@@ -114,6 +113,8 @@ cask "bitwarden"
 cask "notion"
 cask "audacity"
 cask "veracrypt"
+cask "clockify"
+cask "obsidian"
 
 # macOS Tools
 mas "Magent", id: 441258766
@@ -123,6 +124,7 @@ mas "ToothFairy", id: 1191449274
 mas "Dato", id: 1470584107
 mas "Display Menu", id: 549083868
 cask "karabiner-elements"
+cask "xcodes"
 
 # Drivers and special hardware tools
 cask "logi-options-plus"

@@ -21,7 +21,7 @@ if [[ "$VSCODE_PID" = "" ]]; then
   # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
   #ZSH_THEME="robbyrussell"
   #ZSH_THEME="agnoster"
-  source "$(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" # Set Theme to Powerlevel10k
+  source "$(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" # Set Theme to Powerlevel10k
 
   # Set list of themes to pick from when loading at random
   # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -139,6 +139,11 @@ if [[ "$VSCODE_PID" = "" ]]; then
   # Option Keys
   bindkey '[C' forward-word
   bindkey '[D' backward-word
+
+  # NVM
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"
+  [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && \. "/usr/local/opt/nvm/etc/bash_completion"
 fi
 
 alias k=kubectl
@@ -157,6 +162,7 @@ alias az-wemogy-test="az account set -s 0b05fa67-dd74-4ed1-9d85-d1a04b6e4c33 && 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export PATH="/usr/local/opt/node@12/bin:$PATH"
 export PATH=$PATH:/$HOME/.dapr/bin
+export PATH=$PATH:/$HOME/.dotnet/tools
 
 # Keys and Tokens
 export GITGUARDIAN_API_KEY='bFB9Bcedd1DAe1AddFECbC1bfF52c5BFc6DF885D4F7F7Bac2DB3e3afD4c5C7fb5f5b3c9'

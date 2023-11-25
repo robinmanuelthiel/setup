@@ -2,6 +2,18 @@
 
 My personal collection of configuration files.
 
+## Install XCode
+
+It's recommended to install XCode before installing all other applications, because some of them depend on XCode.
+
+The best way to install XCode is not via Store.
+
+1. [Download XCode](https://developer.apple.com/download/all/?q=Xcode)
+1. Run `xip -x Xcode_14.2.xip` to unzip
+1. Move the Xcode file to the Applications folder
+
+Needs to be started once to accept the license.
+
 ## Install [homebrew](https://brew.sh/)
 
 ```bash
@@ -10,8 +22,10 @@ My personal collection of configuration files.
 
 ## Install all other applications with homebrew
 
+Use the Brewfile from this repository to install all applications.
+
 ```bash
-brew bundle --file Brewfile
+brew bundle --file ./Brewfile
 ```
 
 After installing, the Brewfile, some additional steps need to be sorted out.
@@ -22,21 +36,13 @@ brew reinstall dotnet-sdk3-1-400
 # brew reinstall dotnet-sdk...
 ```
 
+## Install Node
+
 ```bash
 # Install current Node.js TLS version via NVM
 nvm install --lts
 nvm use --lts
 ```
-
-## Install XCode
-
-The best way to install XCode is not via Store.
-
-1. [Download XCode](https://developer.apple.com/download/all/?q=Xcode)
-1. Run `xip -x Xcode_14.2.xip` to unzip
-1. Move the Xcode file to the Applications folder
-
-Needs to be started once to accept the license.
 
 ## Configure tools
 
@@ -46,7 +52,7 @@ Needs to be started once to accept the license.
 # Install Oh My ZSH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# Copy config
+# Copy config from this repository to the home directory
 cp .zshrc ~
 ```
 
@@ -77,7 +83,7 @@ Add the following settings to enable the correct styling for Powerlevel10k in yo
 
 ### Android Studio
 
-Needs to be started once to install and configure the Android SDK tools
+Needs to be started once to install and configure the Android SDK tools.
 
 ### Karabiner-Elements
 
