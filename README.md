@@ -93,7 +93,7 @@ Needs to be started once to install and configure the Android SDK tools.
 
 ### iTerm
 
-Allow Option + Arrow Keymappings: https://apple.stackexchange.com/a/293988
+~~Allow Option + Arrow Keymappings: https://apple.stackexchange.com/a/293988~~
 
 ### Spotlight
 
@@ -103,5 +103,6 @@ To increase performance and reduce battery drain, remove the folder where you st
 
 ## What needs to be installed manually
 
+- [Segoe UI Font](https://developer.microsoft.com/en-us/fluentui#/resources)
 - [Global Protect](https://microsoft.sharepoint.com/sites/Network_Connectivity/SitePages/RemoteAccess/GlobalProtect-Desktop-VPN-app-for-Mac.aspx)
 - [Audacity](https://www.audacityteam.org/)
