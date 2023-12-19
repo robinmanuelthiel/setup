@@ -15,13 +15,13 @@ tap "fluxcd/tap"
 
 # CLI
 brew "tree"
-brew "gettext", link: true # for envsubst
+brew "gettext", link: true # needed for envsubst
 brew "fzf"
 brew "jq"
 brew "watch"
 brew "wget"
 brew "watchman"
-brew "romkatv/powerlevel10k/powerlevel10k"
+brew "powerlevel10k"
 brew "zsh-syntax-highlighting"
 brew "zsh-autosuggestions"
 brew "thefuck"
@@ -62,13 +62,13 @@ brew "pre-commit"
 # Kubernetes
 brew "kubernetes-cli"
 brew "kubectx"
-brew "kube-ps1"
 brew "kubelogin"
 brew "krew"
+brew "helm"
+brew "kube-ps1"
 brew "velero"
 brew "rbac-lookup"
 brew "openshift-cli"
-brew "helm"
 brew "minikube"
 brew "linkerd"
 brew "fluxcd/tap/flux"
@@ -100,16 +100,14 @@ cask "skype"
 cask "whatsapp"
 cask "signal"
 cask "discord"
-cask "grammarly"
 mas "Todoist", id: 585829637
 cask "Timeular"
-cask "soundcleod"
-cask "airserver"
 mas "Microsoft Remote Desktop", id: 1295203466
 cask "sonos"
 cask "obs"
 mas "Authenticator", id: 1538761576
 cask "bitwarden"
+brew "bitwarden-cli"
 cask "notion"
 cask "audacity"
 cask "veracrypt"
@@ -120,11 +118,11 @@ cask "obsidian"
 mas "Magent", id: 441258766
 cask "bartender"
 cask "spotmenu"
-mas "ToothFairy", id: 1191449274
+# mas "ToothFairy", id: 1191449274
 mas "Dato", id: 1470584107
 mas "Display Menu", id: 549083868
 cask "karabiner-elements"
-cask "xcodes"
+cask "raycast"
 
 # Drivers and special hardware tools
 cask "logi-options-plus"
