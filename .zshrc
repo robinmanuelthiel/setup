@@ -8,115 +8,15 @@ if [[ "$VSCODE_PID" = "" ]]; then
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
   fi
 
-  # If you come from bash you might have to change your $PATH.
-  # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-  # Path to your oh-my-zsh installation.
-  export ZSH="/Users/robinmanuelthiel/.oh-my-zsh"
-
-  # Set name of the theme to load --- if set to "random", it will
-  # load a random theme each time oh-my-zsh is loaded, in which case,
-  # to know which specific one was loaded, run: echo $RANDOM_THEME
-  # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-  #ZSH_THEME="robbyrussell"
-  #ZSH_THEME="agnoster"
-  source "$(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" # Set Theme to Powerlevel10k
-
-  # Set list of themes to pick from when loading at random
-  # Setting this variable when ZSH_THEME=random will cause zsh to load
-  # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
-  # If set to an empty array, this variable will have no effect.
-  # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
-  # Uncomment the following line to use case-sensitive completion.
-  # CASE_SENSITIVE="true"
-
-  # Uncomment the following line to use hyphen-insensitive completion.
-  # Case-sensitive completion must be off. _ and - will be interchangeable.
-  # HYPHEN_INSENSITIVE="true"
-
-  # Uncomment the following line to disable bi-weekly auto-update checks.
-  # DISABLE_AUTO_UPDATE="true"
-
-  # Uncomment the following line to automatically update without prompting.
-  # DISABLE_UPDATE_PROMPT="true"
-
-  # Uncomment the following line to change how often to auto-update (in days).
-  # export UPDATE_ZSH_DAYS=13
+  # Set Theme to Powerlevel10k
+  source "$(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" 
 
   # Uncomment the following line if pasting URLs and other text is messed up.
   DISABLE_MAGIC_FUNCTIONS=true
 
-  # Uncomment the following line to disable colors in ls.
-  # DISABLE_LS_COLORS="true"
-
-  # Uncomment the following line to disable auto-setting terminal title.
-  # DISABLE_AUTO_TITLE="true"
-
-  # Uncomment the following line to enable command auto-correction.
-  # ENABLE_CORRECTION="true"
-
-  # Uncomment the following line to display red dots whilst waiting for completion.
-  # COMPLETION_WAITING_DOTS="true"
-
-  # Uncomment the following line if you want to disable marking untracked files
-  # under VCS as dirty. This makes repository status check for large repositories
-  # much, much faster.
-  # DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-  # Uncomment the following line if you want to change the command execution time
-  # stamp shown in the history command output.
-  # You can set one of the optional three formats:
-  # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-  # or set a custom format using the strftime function format specifications,
-  # see 'man strftime' for details.
-  # HIST_STAMPS="mm/dd/yyyy"
-
-  # Would you like to use another custom folder than $ZSH/custom?
-  # ZSH_CUSTOM=/path/to/new-custom-folder
-
-  # Which plugins would you like to load?
-  # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-  # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-  # Example format: plugins=(rails git textmate ruby lighthouse)
-  # Add wisely, as too many plugins slow down shell startup.
-  source $ZSH/oh-my-zsh.sh
-  source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-  source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-  # source "$(brew --prefix)/opt/kube-ps1/share/kube-ps1.sh" # Not needed, because integrated in Powerleve10k
-  # source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh # Not needed, because integrated in Powerleve10k
-
-  plugins=(
-      git
-      fzf
-  )  
-
-  # User configuration
-
-  # export MANPATH="/usr/local/man:$MANPATH"
+  # Set default user
   DEFAULT_USER="robinmanuelthiel"
 
-  # You may need to manually set your language environment
-  # export LANG=en_US.UTF-8
-
-  # Preferred editor for local and remote sessions
-  # if [[ -n $SSH_CONNECTION ]]; then
-  #   export EDITOR='vim'
-  # else
-  #   export EDITOR='mvim'
-  # fi
-
-  # Compilation flags
-  # export ARCHFLAGS="-arch x86_64"
-
-  # Set personal aliases, overriding those provided by oh-my-zsh libs,
-  # plugins, and themes. Aliases can be placed here, though oh-my-zsh
-  # users are encouraged to define aliases within the ZSH_CUSTOM folder.
-  # For a full list of active aliases, run `alias`.
-  #
-  # Example aliases
-  # alias zshconfig="mate ~/.zshrc"
-  # alias ohmyzsh="mate ~/.oh-my-zsh"
   alias k=kubectl
   alias t=terraform
   alias c=clear
@@ -130,8 +30,11 @@ if [[ "$VSCODE_PID" = "" ]]; then
   alias az-wemogy="az account set -s 0dce37d2-715f-42a8-8297-7b3b30382521 && az account show"
   alias az-wemogy-test="az account set -s 0b05fa67-dd74-4ed1-9d85-d1a04b6e4c33 && az account show"
 
+  autoload -U +X bashcompinit && bashcompinit
+  autoload -U +X compinit && compinit
+
   # Azure auto-complete
-  source /usr/local/etc/bash_completion.d/az
+  [ -s "$(brew --prefix)/etc/bash_completion.d/az" ] && \. "$(brew --prefix)/etc/bash_completion.d/az"
 
   # Kubectl auto-complete
   if [ /usr/local/bin/kubectl ]; then source <(kubectl completion zsh); fi
@@ -148,13 +51,17 @@ if [[ "$VSCODE_PID" = "" ]]; then
 
   # NVM (replaced by fnm)
   eval "$(fnm env --use-on-cd)"
-  # export NVM_DIR="$HOME/.nvm"
-  # [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"
-  # [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && \. "/usr/local/opt/nvm/etc/bash_completion"
 
   # Krew
   export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
   export PATH="/usr/local/opt/node@12/bin:$PATH"
   export PATH=$PATH:/$HOME/.dapr/bin
   export PATH=$PATH:/$HOME/.dotnet/tools
+
+  # Plugins
+  source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  
+  # fzf Key Bidnings
+  source $(brew --prefix)/opt/fzf/shell/key-bindings.zsh
 fi
