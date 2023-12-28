@@ -49,9 +49,6 @@ nvm use --lts
 ### Command line
 
 ```bash
-# Install Oh My ZSH
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 # Copy config from this repository to the home directory
 cp .zshrc ~
 ```
