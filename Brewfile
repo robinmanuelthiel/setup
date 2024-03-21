@@ -91,12 +91,12 @@ cask "iterm2"
 cask "google-chrome"
 cask "microsoft-edge"
 cask "firefox"
+cask "arc"
 cask "slack"
 cask "spotify"
 cask "microsoft-office"
 cask "microsoft-teams"
 # mas "Microsoft OneNote", id: 784801555
-cask "skype"
 cask "whatsapp"
 cask "signal"
 cask "discord"
@@ -113,6 +113,7 @@ cask "audacity"
 cask "veracrypt"
 cask "clockify"
 cask "obsidian"
+cask "anytype"
 
 # macOS Tools
 mas "Magent", id: 441258766
