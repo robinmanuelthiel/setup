@@ -117,6 +117,7 @@ cask "obsidian"
 cask "anytype"
 cask "adobe-creative-cloud"
 cask "languagetool"
+cask "reader"
 
 # macOS Tools
 mas "Magent", id: 441258766
