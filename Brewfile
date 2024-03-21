@@ -99,6 +99,7 @@ cask "microsoft-teams"
 # mas "Microsoft OneNote", id: 784801555
 cask "whatsapp"
 cask "signal"
+cask "telegram"
 cask "discord"
 mas "Todoist", id: 585829637
 cask "Timeular"
@@ -115,6 +116,7 @@ cask "clockify"
 cask "obsidian"
 cask "anytype"
 cask "adobe-creative-cloud"
+cask "languagetool"
 
 # macOS Tools
 mas "Magent", id: 441258766
