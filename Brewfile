@@ -114,6 +114,7 @@ cask "veracrypt"
 cask "clockify"
 cask "obsidian"
 cask "anytype"
+cask "adobe-creative-cloud"
 
 # macOS Tools
 mas "Magent", id: 441258766
