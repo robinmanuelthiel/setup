@@ -39,7 +39,7 @@ cask "dotnet-sdk"
 cask "dotnet-sdk5-0-400"
 cask "dotnet-sdk3-1-400"
 cask "dotnet-sdk6-0-400"
-brew "nvm"
+brew "fnm" # nvm replacement
 brew "yarn"
 cask "github"
 cask "docker"
