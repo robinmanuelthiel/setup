@@ -104,3 +104,19 @@ To increase performance and reduce battery drain, remove the folder where you st
 - [Segoe UI Font](https://developer.microsoft.com/en-us/fluentui#/resources) incl. [Segoe MDL2 Assets](https://learn.microsoft.com/en-us/windows/apps/design/style/segoe-ui-symbol-font)
 - [Global Protect](https://microsoft.sharepoint.com/sites/Network_Connectivity/SitePages/RemoteAccess/GlobalProtect-Desktop-VPN-app-for-Mac.aspx)
 - [Audacity](https://www.audacityteam.org/)
+
+## Setup a new device
+
+In case, a new device needs to be set up, the following steps are requires
+
+- [ ] Run Company Portal to Domain Join the device
+- [ ] Configure Bitwarden
+- [ ] Configure Authenticator (Auto-Start and Menu Bar)
+- [ ] Add Internet Accounts to System Settings
+- [ ] Import Raycast Backup
+- [ ] Replace Spotlight Search with Raycast
+- [ ] Add E-Mail Accounts to Outlook
+- [ ] Adjust Notification Settings to Outlook
+- [ ] Add and configure Extensions to the Browser(s)
+- [ ] Configure Microsoft Teams Notification Settings
+- [ ] Visual Studio Code Settings Sync
