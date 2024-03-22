@@ -122,3 +122,6 @@ In case, a new device needs to be set up, the following steps are requires
 - [ ] Visual Studio Code Settings Sync
 - [ ] Configure GitHub Desktop (just Drag and Drop Repos from Source Folder)
 - [ ] Authenticate against [private Nuget and NPM registries](https://docs-internal.wemogy.com/general/developer-setup/private-registries)
+- [ ] Configure SwitchResX with Shortcuts for Streamdeck
+      ![image](https://github.com/robinmanuelthiel/setup/assets/5874465/b5328281-0d6e-4329-8457-bbd39c81e0e3)
+
