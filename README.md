@@ -120,3 +120,4 @@ In case, a new device needs to be set up, the following steps are requires
 - [ ] Add and configure Extensions to the Browser(s)
 - [ ] Configure Microsoft Teams Notification Settings
 - [ ] Visual Studio Code Settings Sync
+- [ ] Configure GitHub Desktop (just Drag and Drop Repos from Source Folder)
