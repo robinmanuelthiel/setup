@@ -128,6 +128,7 @@ mas "Dato", id: 1470584107
 mas "Display Menu", id: 549083868
 cask "karabiner-elements"
 cask "raycast"
+cask "switchresx"
 
 # Drivers and special hardware tools
 cask "logi-options-plus"
