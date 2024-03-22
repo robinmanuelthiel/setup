@@ -121,3 +121,4 @@ In case, a new device needs to be set up, the following steps are requires
 - [ ] Configure Microsoft Teams Notification Settings
 - [ ] Visual Studio Code Settings Sync
 - [ ] Configure GitHub Desktop (just Drag and Drop Repos from Source Folder)
+- [ ] Authenticate against [private Nuget and NPM registries](https://docs-internal.wemogy.com/general/developer-setup/private-registries)
