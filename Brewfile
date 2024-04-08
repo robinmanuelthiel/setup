@@ -1,8 +1,5 @@
 tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/core"
 tap "romkatv/powerlevel10k"
-tap "homebrew/cask-drivers"
 tap "azure/functions"
 tap "azure/kubelogin"
 tap "dapr/tap"
@@ -58,6 +55,7 @@ brew "graphviz"
 brew "openapi-generator"
 brew "gitlint"
 brew "pre-commit"
+cask "sf-symbols"
 
 # Kubernetes
 brew "kubernetes-cli"
@@ -118,6 +116,8 @@ cask "anytype"
 cask "adobe-creative-cloud"
 cask "languagetool"
 cask "reader"
+cask "steam"
+mas "davinci-resolve", id: 571213070
 
 # macOS Tools
 mas "Magent", id: 441258766
