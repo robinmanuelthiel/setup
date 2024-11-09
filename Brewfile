@@ -32,10 +32,11 @@ brew "terraform"
 
 # Development
 cask "visual-studio-code"
-cask "dotnet-sdk"
-cask "dotnet-sdk5-0-400"
+cask "dotnet-sdk@preview"
 cask "dotnet-sdk3-1-400"
-cask "dotnet-sdk6-0-400"
+cask "dotnet-sdk5"
+cask "dotnet-sdk6"
+cask "dotnet-sdk8"
 brew "fnm" # nvm replacement
 brew "yarn"
 cask "github"
@@ -56,6 +57,7 @@ brew "openapi-generator"
 brew "gitlint"
 brew "pre-commit"
 cask "sf-symbols"
+brew "ollama"
 
 # Kubernetes
 brew "kubernetes-cli"
@@ -73,7 +75,7 @@ brew "fluxcd/tap/flux"
 brew "kind"
 
 # Mobile Development
-# cask "adoptopenjdk8"
+cask "adoptopenjdk8"
 # cask "android-studio"
 # cask "xamarin"
 # cask "xamarin-ios"

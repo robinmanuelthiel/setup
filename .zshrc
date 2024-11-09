@@ -9,7 +9,7 @@ if [[ "$VSCODE_PID" = "" ]]; then
   fi
 
   # Set Theme to Powerlevel10k
-  source "$(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" 
+  source "$(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme"
 
   # Uncomment the following line if pasting URLs and other text is messed up.
   DISABLE_MAGIC_FUNCTIONS=true
@@ -21,17 +21,18 @@ if [[ "$VSCODE_PID" = "" ]]; then
   alias t=terraform
   alias c=clear
   alias nvm=fnm
+  alias please='sudo $(fc -ln -1)'
 
   # Azure Account Switch
-  alias az-eve="az account set -s 781b01b5-9d47-4b4a-bcdd-b24d9f479fd2 && az account show" 
-  alias az-eve2="az account set -s f3957873-3134-4def-9380-b93ad9d4a935 && az account show"
-  alias az-ms="az account set -s 0ec6dbb0-b89b-4bb3-9140-14e3d244e0ee && az account show"
-  alias az-ms2="az account set -s f176cb8a-43d5-4490-9d2b-5ef5fcb7bf95 && az account show"
-  alias az-wemogy="az account set -s 0dce37d2-715f-42a8-8297-7b3b30382521 && az account show"
-  alias az-wemogy-test="az account set -s 0b05fa67-dd74-4ed1-9d85-d1a04b6e4c33 && az account show"
+  alias az-eve="az account set -s 3f249652-ea72-46a9-b1b7-b654ee8f89d3 && az account show" 
+  alias az-ms="az account set -s 45568880-3489-47ce-8fb7-95aeebf63120 && az account show"
+  alias az-spaceblocks="az account set -s d906ba88-5844-44ed-a204-88b38c0a101c && az account show"
 
   autoload -U +X bashcompinit && bashcompinit
   autoload -U +X compinit && compinit
+
+  # Highlight selection in menu completion
+  zstyle ':completion:*' menu select
 
   # Azure auto-complete
   [ -s "$(brew --prefix)/etc/bash_completion.d/az" ] && \. "$(brew --prefix)/etc/bash_completion.d/az"
@@ -52,12 +53,6 @@ if [[ "$VSCODE_PID" = "" ]]; then
   # NVM (replaced by fnm)
   eval "$(fnm env --use-on-cd)"
 
-  # Krew
-  export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-  export PATH="/usr/local/opt/node@12/bin:$PATH"
-  export PATH=$PATH:/$HOME/.dapr/bin
-  export PATH=$PATH:/$HOME/.dotnet/tools
-
   # Plugins
   source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
   source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -65,3 +60,11 @@ if [[ "$VSCODE_PID" = "" ]]; then
   # fzf Key Bidnings
   source $(brew --prefix)/opt/fzf/shell/key-bindings.zsh
 fi
+
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+export PATH="/usr/local/opt/node@12/bin:$PATH"
+export PATH=$PATH:/$HOME/.dapr/bin
+export PATH=$PATH:/$HOME/.dotnet/tools
+export PATH=$PATH:/$HOME/go/bin
+export PATH=$PATH:/$HOME/.local/bin
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
