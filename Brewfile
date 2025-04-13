@@ -9,6 +9,9 @@ tap "ory/tap"
 tap "ory/hydra"
 tap "gitguardian/ggshield"
 tap "fluxcd/tap"
+tap "azure/azd" 
+tap "ngrok/ngrok" 
+tap "shopify/shopify"
 
 # CLI
 brew "tree"
@@ -27,12 +30,14 @@ brew "cmatrix"
 
 # Cloud
 brew "azure-cli"
+brew "azd"
 cask "microsoft-azure-storage-explorer"
 brew "terraform"
 
 # Development
 cask "visual-studio-code"
-cask "dotnet-sdk@preview"
+cask "visual-studio-code@insiders"
+#cask "dotnet-sdk@preview"
 cask "dotnet-sdk3-1-400"
 cask "dotnet-sdk5"
 cask "dotnet-sdk6"
@@ -58,6 +63,10 @@ brew "gitlint"
 brew "pre-commit"
 cask "sf-symbols"
 brew "ollama"
+cask "devtunnel"
+cask "ngrok"
+brew "shopify-cli"
+cask "github-copilot-for-xcode"
 
 # Kubernetes
 brew "kubernetes-cli"
@@ -120,6 +129,7 @@ cask "languagetool"
 cask "reader"
 cask "steam"
 mas "davinci-resolve", id: 571213070
+cask "vmware-fusion"
 
 # macOS Tools
 mas "Magent", id: 441258766
@@ -131,6 +141,9 @@ mas "Display Menu", id: 549083868
 cask "karabiner-elements"
 cask "raycast"
 cask "switchresx"
+cask "keycastr"
+cask "fluor"
+cask "macfuse"
 
 # Drivers and special hardware tools
 cask "logi-options-plus"
