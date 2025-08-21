@@ -1,6 +1,6 @@
 {
   // Styling
-  "workbench.colorTheme": "Dracula",
+  "workbench.colorTheme": "Dracula Theme",
   "workbench.iconTheme": "material-icon-theme",
   "editor.fontSize": 13,
   "debug.console.fontSize": 13,

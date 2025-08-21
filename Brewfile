@@ -67,6 +67,7 @@ cask "devtunnel"
 cask "ngrok"
 brew "shopify-cli"
 cask "github-copilot-for-xcode"
+brew "gemini-cli"
 
 # Kubernetes
 brew "kubernetes-cli"
@@ -129,7 +130,6 @@ cask "languagetool"
 cask "reader"
 cask "steam"
 mas "davinci-resolve", id: 571213070
-cask "vmware-fusion"
 
 # macOS Tools
 mas "Magent", id: 441258766
@@ -144,6 +144,8 @@ cask "switchresx"
 cask "keycastr"
 cask "fluor"
 cask "macfuse"
+brew "whisper-cpp"
+brew "sox"
 
 # Drivers and special hardware tools
 cask "logi-options-plus"
