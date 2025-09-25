@@ -31,7 +31,8 @@ brew "cmatrix"
 # Cloud
 brew "azure-cli"
 brew "azd"
-cask "microsoft-azure-storage-explorer"
+#cask "microsoft-azure-storage-explorer"
+#cask "azure-data-studio"
 brew "terraform"
 
 # Development
@@ -55,7 +56,6 @@ brew "nuget"
 cask "arduino"
 brew "python"
 brew "typescript"
-cask "azure-data-studio"
 brew "act"
 brew "graphviz"
 brew "openapi-generator"
@@ -65,7 +65,6 @@ cask "sf-symbols"
 brew "ollama"
 cask "devtunnel"
 cask "ngrok"
-brew "shopify-cli"
 cask "github-copilot-for-xcode"
 brew "gemini-cli"
 
@@ -85,7 +84,7 @@ brew "fluxcd/tap/flux"
 brew "kind"
 
 # Mobile Development
-cask "adoptopenjdk8"
+#cask "adoptopenjdk8"
 # cask "android-studio"
 # cask "xamarin"
 # cask "xamarin-ios"
@@ -100,7 +99,7 @@ cask "drawio"
 cask "iterm2"
 cask "google-chrome"
 cask "microsoft-edge"
-cask "firefox"
+#cask "firefox"
 cask "arc"
 cask "slack"
 cask "spotify"
@@ -125,16 +124,16 @@ cask "veracrypt"
 cask "clockify"
 cask "obsidian"
 cask "anytype"
-cask "adobe-creative-cloud"
+#cask "adobe-creative-cloud"
 cask "languagetool"
 cask "reader"
 cask "steam"
 mas "davinci-resolve", id: 571213070
 
 # macOS Tools
-mas "Magent", id: 441258766
+#mas "Magent", id: 441258766
 cask "bartender"
-cask "spotmenu"
+#cask "spotmenu"
 # mas "ToothFairy", id: 1191449274
 mas "Dato", id: 1470584107
 mas "Display Menu", id: 549083868
@@ -142,7 +141,7 @@ cask "karabiner-elements"
 cask "raycast"
 cask "switchresx"
 cask "keycastr"
-cask "fluor"
+#cask "fluor"
 cask "macfuse"
 brew "whisper-cpp"
 brew "sox"
