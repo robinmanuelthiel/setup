@@ -44,9 +44,7 @@ nvm install --lts
 nvm use --lts
 ```
 
-## Configure tools
-
-### Command line
+## Configure Command line
 
 ```bash
 # Copy config from this repository to the home directory
@@ -65,64 +63,19 @@ Copy the Powerlevel10k config over
 cp .p10k.zsh ~
 ```
 
-### Visual Studio Code
-
-1. log in to Visual Studio Code with your GitHub Account and enable Settings Sync
-2. If not already in the settings, copy the content of `.vscode/settings.json` to the settings JSON, which can be opened with (`CMD+Shift+P` -> `Preferences: Open Settings (JSON)`)
-3. If not already in the key bindings, copy the content of `.vscode/keybindings.json` to the keybindings JSON, which can be opened with (`CMD+Shift+P` -> `Preferences: Open Keyboard Shortcuts (JSON)`)
-4. Open this repository in Visual Studio code and install the recommended extensions
-
-Add the following settings to enable the correct styling for Powerlevel10k in your Terminal:
-
-```json
-"terminal.integrated.fontFamily": "MesloLGS NF",
-```
-
-### Android Studio
-
-Needs to be started once to install and configure the Android SDK tools.
-
-### Karabiner-Elements
-
-![](img/karabiner-1.png)
-
-![](img/karabiner-2.png)
-
-### iTerm
-
-~~Allow Option + Arrow Keymappings: https://apple.stackexchange.com/a/293988~~
-
-### Spotlight
-
-To increase performance and reduce battery drain, remove the folder where you store the source code from Spotlight indexing.
-
-<img width="780" alt="spotlight" src="https://user-images.githubusercontent.com/5874465/140032291-fdcf6c0d-c9c8-4df6-bb1e-e1c893a1ac9f.png">
-
 ## What needs to be installed manually
 
 - [Microsoft Company Portal](https://go.microsoft.com/fwlink/?linkid=853070)
 - [Segoe UI Font](https://developer.microsoft.com/en-us/fluentui#/resources) incl. [Segoe MDL2 Assets](https://learn.microsoft.com/en-us/windows/apps/design/style/segoe-ui-symbol-font)
 - [Global Protect](https://microsoft.sharepoint.com/sites/Network_Connectivity/SitePages/RemoteAccess/GlobalProtect-Desktop-VPN-app-for-Mac.aspx)
-- [Elgato Stream Deck Sonos Plugin](https://github.com/GenericMale/streamdeck-sonos)
+- [Elgato Stream Deck Sonos Plugin](https://github.com/GenericMale/streamdeck-sonos) _(might require system restart before is works)_
+- [Dee Gateway](https://www.dotec-audio.com/deegate.html) for Microphone
 - [VM Ware Fusion](https://support.broadcom.com/group/ecx/productfiles?subFamily=VMware%20Fusion&displayGroup=VMware%20Fusion%2013&release=13.6.2&os=&servicePk=526671&language=EN&freeDownloads=true)
+- [Live-Server](https://www.npmjs.com/package/live-server) (via NPM) `npm install -g live-server`
 
 ## Setup a new device
 
 In case, a new device needs to be set up, the following steps are requires
 
 - [ ] Run Company Portal to Domain Join the device
-- [ ] Configure Bitwarden
-- [ ] Configure Authenticator (Auto-Start and Menu Bar)
-- [ ] Add Internet Accounts to System Settings
-- [ ] Import Raycast Backup
-- [ ] Replace Spotlight Search with Raycast
-- [ ] Add E-Mail Accounts to Outlook
-- [ ] Adjust Notification Settings to Outlook
-- [ ] Add and configure Extensions to the Browser(s)
-- [ ] Configure Microsoft Teams Notification Settings
-- [ ] Visual Studio Code Settings Sync
-- [ ] Configure GitHub Desktop (just Drag and Drop Repos from Source Folder)
-- [ ] Authenticate against [private Nuget and NPM registries](https://docs-internal.wemogy.com/general/developer-setup/private-registries)
-- [ ] Configure SwitchResX with Shortcuts for Streamdeck
-      ![image](https://github.com/robinmanuelthiel/setup/assets/5874465/b5328281-0d6e-4329-8457-bbd39c81e0e3)
-
+- [ ] Set the [System and Application Settings](SETTINGS.md)
