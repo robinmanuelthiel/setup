@@ -179,6 +179,7 @@ Just Drag and Drop Repos from Source Folder
 ## Microsoft Teams
 
 - Configure Microsoft Teams Notification Settings
+- Privacy: Third-party app API: Enabled
 
 ## Authenticator
 
