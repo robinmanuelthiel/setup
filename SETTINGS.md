@@ -12,6 +12,7 @@
 - Menu Bar: Always Show Sound
 - Dock: Show suggested and recent apps: Disabled
 - Add Internet Accounts to System Settings
+- Touchpad: Gestures -> App Exposé: 3 Finger Swipe Down
 
 ## Bitwarden
 
@@ -54,7 +55,7 @@
 - Deepcast
 - Whisper Dictation (Download Small Multi-Lingual Model)
 
-## Shortcuts
+### Shortcuts
 
 - Hyper + V: Clipboard History
 - Hyper + T: Microsoft Teams
@@ -62,13 +63,21 @@
 - Hyper + C: Code
 - Hyper + M: Mail
 - Hyper + SPACE: Dictation
+- CMD + Option + Space: Emoji & Symbols
 
-## Hotkeys
+### Hotkeys
 
 - `bw` -> Search Bitwarden
 - `de` -> Translate with DeepL to German
 - `en` -> Translate with DeepL to English
 - `it` -> Translate with DeepL to Italian
+
+### Settings
+
+- 2FA -> Also include Mail
+- DeepL -> Set API Key
+- DeepL -> Set Tone to informal
+- DeepL -> Set Default behavior to show translation
 
 ## Browser
 

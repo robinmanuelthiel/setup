@@ -73,7 +73,7 @@ cask "claude-code"
 # Kubernetes
 brew "kubernetes-cli"
 brew "kubectx"
-brew "kubelogin"
+brew "azure/kubelogin/kubelogin"
 brew "krew"
 brew "helm"
 brew "kube-ps1"
