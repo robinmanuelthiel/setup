@@ -76,6 +76,8 @@
 
 - 2FA -> Also include Mail
 - DeepL -> Set API Key
+- DeepL -> Set Tone to informal
+- DeepL -> Set Default behavior to show translation
 
 ## Browser
 
