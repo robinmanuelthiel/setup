@@ -36,9 +36,9 @@ brew "terraform"
 
 # Development
 cask "visual-studio-code"
-cask "visual-studio-code@insiders"
-cask "dotnet-sdk3-1-400"
-cask "dotnet-sdk5"
+# cask "visual-studio-code@insiders"
+# cask "dotnet-sdk3-1-400"
+# cask "dotnet-sdk5"
 cask "dotnet-sdk6"
 cask "dotnet-sdk8"
 cask "dotnet-sdk"
@@ -73,7 +73,7 @@ cask "claude-code"
 # Kubernetes
 brew "kubernetes-cli"
 brew "kubectx"
-brew "kubelogin"
+brew "azure/kubelogin/kubelogin"
 brew "krew"
 brew "helm"
 brew "kube-ps1"
@@ -114,7 +114,7 @@ cask "telegram"
 cask "discord"
 mas "Todoist", id: 585829637
 cask "Timeular"
-mas "Microsoft Remote Desktop", id: 1295203466
+# mas "Microsoft Remote Desktop", id: 1295203466
 cask "sonos"
 cask "obs"
 mas "Authenticator", id: 1538761576
@@ -136,7 +136,7 @@ cask "claude"
 cask "zoom"
 
 # macOS Tools
-#mas "Magent", id: 441258766
+# mas "Magent", id: 441258766 # Replaced by Raycast
 cask "bartender"
 #cask "spotmenu"
 # mas "ToothFairy", id: 1191449274
@@ -150,7 +150,6 @@ cask "macfuse"
 brew "whisper-cpp"
 brew "sox"
 cask "cleanshot"
-cask "switchresx"
 
 # Drivers and special hardware tools
 cask "logi-options+"

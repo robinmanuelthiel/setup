@@ -12,6 +12,7 @@
 - Menu Bar: Always Show Sound
 - Dock: Show suggested and recent apps: Disabled
 - Add Internet Accounts to System Settings
+- Touchpad: Gestures -> App Exposé: 3 Finger Swipe Down
 
 ## Bitwarden
 
@@ -54,7 +55,7 @@
 - Deepcast
 - Whisper Dictation (Download Small Multi-Lingual Model)
 
-## Shortcuts
+### Shortcuts
 
 - Hyper + V: Clipboard History
 - Hyper + T: Microsoft Teams
@@ -62,23 +63,37 @@
 - Hyper + C: Code
 - Hyper + M: Mail
 - Hyper + SPACE: Dictation
+- CMD + Option + Space: Emoji & Symbols
 
-## Hotkeys
+### Hotkeys
 
 - `bw` -> Search Bitwarden
 - `de` -> Translate with DeepL to German
 - `en` -> Translate with DeepL to English
 - `it` -> Translate with DeepL to Italian
 
+### Settings
+
+- 2FA -> Also include Mail
+- DeepL -> Set API Key
+
 ## Browser
 
 - [Readwise Reader](https://chromewebstore.google.com/detail/readwise-highlighter/jjhefcfhmnkfeepcpnilbbkaadhngkbi)
 - [Make Social Media Great Again](https://chromewebstore.google.com/detail/make-social-media-great-a/feocoiiokphjecgcogdkolkpjjjfgalb?hl=en-US)
 - [Notion Web Clipper](https://chromewebstore.google.com/detail/notion-web-clipper/knheggckgoiihginacbkhaalnibhilkk)
-- [Bitwarden Password Manage](https://chromewebstore.google.com/detail/bitwarden-password-manage/nngceckbapebfimnlniiiahkandclblb)
+- [Bitwarden Password Manager](https://chromewebstore.google.com/detail/bitwarden-password-manage/nngceckbapebfimnlniiiahkandclblb)
+  - Account Security -> Lock: Never
+  - Autofill -> Make Bitwarden your Default Password Manager
 - [Authenticator App](https://chromewebstore.google.com/detail/authenticator-app/pnbabdldpneocemigmicebglmmfcjccm)
 - [Clockify Time Tracker](https://chromewebstore.google.com/detail/clockify-time-tracker/pmjeegjhjdlccodhacdgbgfagbpmccpe)
--[Language Tool](https://chromewebstore.google.com/detail/ai-grammar-checker-paraph/oldceeleldhonbafppcapldpdifcinji)
+- [Language Tool](https://chromewebstore.google.com/detail/ai-grammar-checker-paraph/oldceeleldhonbafppcapldpdifcinji)
+
+## Arc
+
+- Automatically Update: true
+- Sync Sidebar: true
+
 
 ## Outlook
 
