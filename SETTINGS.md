@@ -96,7 +96,6 @@
 - Automatically Update: true
 - Sync Sidebar: true
 
-
 ## Outlook
 
 - Sounds: New Message: Disabled
@@ -104,6 +103,7 @@
 - Reading: Swipes: None
 - Notifications: Event Reminder Style: macOS _(might require system restart before visible)_
 - My Day : Show My Day in Menu Bar: Disabled
+- Fonts: 11pt Size
 
 ## Spotify
 
