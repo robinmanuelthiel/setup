@@ -36,12 +36,13 @@
 ### Snippets
 
 - @@ -> <EMAIL>
+- !jtl -> <JTL-EMAIL>
 - !me -> <NAME>
 - !addr -> <ADDRESS>
 - !phone -> <PHONE>
 - !today -> <DATE>
 - !now -> <DATE_AND_TIME>
-- !cal -> <CALENDAR-LINK>
+- !cal -> <CALENDAR-LINK> 
 
 ### Extensions
 
@@ -50,10 +51,13 @@
 - Lorem Ipsum
 - Clockify
 - 2FA Finder
+- Ente Auth
 - Clean Shot X
 - Reclaim
 - Deepcast
 - Whisper Dictation (Download Small Multi-Lingual Model)
+- Todoist
+- GitHub
 
 ### Shortcuts
 
@@ -63,7 +67,7 @@
 - Hyper + C: Code
 - Hyper + M: Mail
 - Hyper + SPACE: Dictation
-- CMD + Option + Space: Emoji & Symbols
+- CTRL + Option + Space: Emoji & Symbols
 
 ### Hotkeys
 
@@ -71,6 +75,7 @@
 - `de` -> Translate with DeepL to German
 - `en` -> Translate with DeepL to English
 - `it` -> Translate with DeepL to Italian
+- `otp` -> Open Ente Auth
 
 ### Settings
 
