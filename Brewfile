@@ -44,7 +44,7 @@ cask "dotnet-sdk8"
 cask "dotnet-sdk"
 #cask "dotnet-sdk@preview"
 brew "fnm" # nvm replacement
-brew "yarn"
+#brew "yarn" # Now installed via corepack, which comes with Node.js
 cask "github"
 brew "gh"
 cask "docker-desktop"
