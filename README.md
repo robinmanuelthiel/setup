@@ -73,6 +73,7 @@ cp .p10k.zsh ~
 - [VM Ware Fusion](https://support.broadcom.com/group/ecx/productfiles?subFamily=VMware%20Fusion&displayGroup=VMware%20Fusion%2013&release=13.6.2&os=&servicePk=526671&language=EN&freeDownloads=true)
 - [Live-Server](https://www.npmjs.com/package/live-server) (via NPM) `npm install -g live-server`
 - [Shure Motiv Mix](https://www.shure.com/de-CH/produkte/software/motiv-mix?variant=MOTIV%2520Mix)
+- [Sotto](https://releaseflow.net/kitze/sotto)
 - Activate corepack for Yarn support: `corepack enable`
 
 ## Setup a new device

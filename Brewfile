@@ -138,6 +138,7 @@ cask "chatgpt"
 cask "claude"
 cask "zoom"
 brew "ente-cli"
+cask "openvpn-connect"
 
 # macOS Tools
 # mas "Magent", id: 441258766 # Replaced by Raycast
@@ -151,7 +152,7 @@ cask "switchresx"
 cask "keycastr"
 #cask "fluor"
 cask "macfuse"
-brew "whisper-cpp"
+brew "whisper-cpp" # Probably not needed anymore, since we repalced the Raycast Whisper extension with sotto
 brew "sox"
 cask "cleanshot"
 
