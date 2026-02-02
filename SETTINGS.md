@@ -206,3 +206,7 @@ Just Drag and Drop Repos from Source Folder
 ## Authenticator
 
 - Auto-Start and Menu Bar Disabled
+
+## CleanShot X
+
+- Screenshots -> Freeze Screen when taking a screenshot: Enabled

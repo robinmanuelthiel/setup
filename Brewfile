@@ -47,6 +47,7 @@ brew "fnm" # nvm replacement
 #brew "yarn" # Now installed via corepack, which comes with Node.js
 cask "github"
 brew "gh"
+cask "copilot-cli"
 cask "docker-desktop"
 cask "powershell"
 cask "postman"
@@ -117,7 +118,7 @@ cask "telegram"
 cask "discord"
 mas "Todoist", id: 585829637
 cask "Timeular"
-# mas "Microsoft Remote Desktop", id: 1295203466
+mas "Windows App", id: 1295203466
 cask "sonos"
 cask "obs"
 mas "Authenticator", id: 1538761576
@@ -139,6 +140,7 @@ cask "claude"
 cask "zoom"
 brew "ente-cli"
 cask "openvpn-connect"
+brew "screen-studio"
 
 # macOS Tools
 # mas "Magent", id: 441258766 # Replaced by Raycast
