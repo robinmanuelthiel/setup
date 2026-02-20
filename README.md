@@ -82,3 +82,31 @@ In case, a new device needs to be set up, the following steps are requires
 
 - [ ] Run Company Portal to Domain Join the device
 - [ ] Set the [System and Application Settings](SETTINGS.md)
+
+## AI Agents
+
+### OpenClaw
+
+[OpenClaw](https://openclaw.ai) is an AI agent platform that supports custom skills for automation and integration.
+
+**Install OpenClaw:**
+
+```bash
+npm install -g openclaw
+openclaw gateway start
+```
+
+**Sync Skills:**
+
+This repository contains custom OpenClaw skills in the `Skills/` folder. To make them available to OpenClaw, run:
+
+```bash
+~/Source/Personal/setup/Skills/sync-openclaw.sh
+```
+
+This creates symlinks from `~/.openclaw/workspace/skills/` to the skills in this repository, allowing you to version control your skills while keeping them synced with OpenClaw.
+
+**Available Skills:**
+- `lanes-planes-expenses` - Automate travel expense drafts in Lanes & Planes
+
+Run the sync script after cloning this repo or adding new skills.
