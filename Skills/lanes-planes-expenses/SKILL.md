@@ -6,17 +6,18 @@ description: Automate travel expense drafts in Lanes & Planes (Blenzen & Blenzen
 # Lanes & Planes Expense Automation
 
 Automate drafting travel expenses in Lanes & Planes by:
-1. Finding open trips (auto-scan or user-specified)
+1. Finding and grouping open trips (auto-scan or user-specified)
 2. Calculating per diem (Mehrkostenpauschale)
 3. Searching email for transport/hotel receipts
-4. Drafting expense ticket (never auto-submit)
+4. Adding additional expenses associated to the trips
+5. Drafting expense report (never auto-submit)
 
 ## Access
 
 - **URL:** https://app.lanes-planes.com/
-- **Login:** Email + SSO
+- **Login:** Email + SSO (robin-manuel.thiel@jtl-software.com)
 - **Expense location:** Under "Tickets" (not a separate expenses section)
-- **Email receipts:** Personal mailbox (robin-manuel@thiel1.de)
+- **Email receipts:** Personal mailbox (robin-manuel@thiel1.de) and Work inbox (robin-manuel.thiel@jtl-software.com)
 
 ## Two Modes
 
@@ -39,62 +40,67 @@ User says: "File expenses for my Berlin trip" or "Complete the January 15th trip
 
 ## Workflow Per Trip
 
-### Step 1: Identify Travel Period
+### Step 1: Identify Travel Period and associated Trips
 
-- Read trip start/end dates
+Single trips can consist of multipe bookings ("Buchungen"), as transport and accommodation can be booked individually.
+
+- Read and identify trip start/end dates
 - Check "Zweck der Reise" field
 - **Deduplicate:** Multiple bookings with same dates + same purpose = one travel period
-- Calculate per diem using [per-diem-rates.md](references/per-diem-rates.md)
 
 ### Step 2: Search Email for Receipts
 
-Use `office365-connector` with `--account=personal`:
-
-```bash
-# Search date range around trip
-node ~/.openclaw/workspace/skills/office365-connector/list-emails.js \
-  --account=personal \
-  --folder=inbox \
-  --from="YYYY-MM-DD" \
-  --to="YYYY-MM-DD" \
-  --search="Bahn OR Uber OR Miles OR Taxi OR Hotel"
-```
+Use the Personal E-Mail Inbox (robin-manuel@thiel1.de) and the Work E-Mail Inbox (robin-manuel.thiel@jtl-software.com) to search for expenses that could be assiciated to the trips.
 
 **Filter for:**
-- Bahn (Deutsche Bahn, train tickets)
-- Uber / Taxi / Miles (rides)
-- Hotel (accommodation)
+
+- Railway (Deutsche Bahn, SBB, train tickets)
+- Taxi (Uber / Taxi / FreeNow rides)
+- Car Sharing (Miles / Car2Go / ShareNow rides)
+- Accommodation (Hotel, Airbnb)
 
 **Ignore:**
+
 - Meal receipts (never file meals)
 - Personal purchases unrelated to travel
 
 ### Step 3: Draft Expense Ticket
 
-In Lanes & Planes:
+**In Lanes & Planes:**
 
-1. Open the trip booking
-2. Create new expense ticket (or find existing draft)
+1. For each trip, identify one main booking to add expenses to
+2. Create new expense ticket (or find existing draft) for each expense ("Auslagen") in this booking
 3. Add line items:
-   - **Per Diem (Mehrkostenpauschale):** One line for entire travel period
-   - **Transport/Hotel:** One line per receipt found
-4. Attach receipts if possible (email PDF attachments)
+   - **Per Diem (Verpflegungsmehraufwand):** One line for entire travel period, assume no meals provided
+   - **Auslagenbeleg:** One line per receipt found (attach/upload receipts if possible)
+4. Create an expense report (see below)
 5. **DO NOT SUBMIT** - Leave as draft for Robin-Manuel to review
+
+**Expense report:**
+
+- Name of the trip
+- List of associated Lanes & Planes Bookings with Links
+- Link of the main Lanes & Planes booking to attach expenses to
+- List of identified expenses for the trip (including Per Diem) with status
+- List of missing expenses/legs (e.g., travel to the airport/train station, last mile to the office)
 
 ## Browser Automation Notes
 
 **Expect timeouts.** Lanes & Planes can be slow. When timeouts occur:
+
 - Retry the action
 - Use direct URLs when possible
 - Reduce actions per page
 - Continue with workarounds rather than stopping
 
 **Prefer:**
+
 - Direct navigation to ticket/booking URLs
 - Fewer clicks per page
 - Waiting for explicit UI state changes
 
 **Avoid:**
+
 - Complex multi-step sequences without checkpoints
 - Waiting for arbitrary timeouts
 - Assuming instant page loads
@@ -104,10 +110,17 @@ In Lanes & Planes:
 Report back:
 ```
 ✅ Processed [Trip Name/Dates]
-   Per Diem: €X (Y days)
-   Receipts found: Z
-   - [Receipt 1 details]
-   - [Receipt 2 details]
+   Included Bookings:
+   - [Booking A + Link] (main)
+   - [Booking B + Link]
+   Expenses found: Z
+   - 🚧 [Receipt 1 details] - PDF could not be uloaded
+   - ✅ [Receipt 2 details]
+   - ❌ [Receipt 3 details]
+   - ✅ [Per diem detials - €X (Y days)]
+   Missing expenses:
+   - Travel to the ZRH airport
+   - Last mile from CGN airport to the destination
    Status: Draft created (not submitted)
 
 🔍 Searched [Date Range] in email
