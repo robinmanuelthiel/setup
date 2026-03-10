@@ -1,11 +1,12 @@
 ---
 name: lanes-planes-expenses
-description: Automate travel expense drafts in Lanes & Planes (Blenzen & Blenzen expense system). Use when Robin-Manuel asks to file expenses, complete expense tickets, process trips, or search for receipts in Lanes & Planes. Supports both auto-scan (all open trips) and manual (specific trip) modes. Searches email for transport/hotel receipts and calculates per diem.
+description: Automate travel expense drafts in Lanes & Planes (work travel booking and expensing system). Use when the user asks to file expenses, complete expense tickets, process trips, or search for receipts in Lanes & Planes. Supports both auto-scan (all open trips) and manual (specific trip) modes. Searches email for transport/hotel/accommodation receipts, files expense reposts and calculates per diem.
 ---
 
 # Lanes & Planes Expense Automation
 
 Automate drafting travel expenses in Lanes & Planes by:
+
 1. Finding and grouping open trips (auto-scan or user-specified)
 2. Calculating per diem (Mehrkostenpauschale)
 3. Searching email for transport/hotel receipts
@@ -129,6 +130,7 @@ Report back:
 
 If multiple trips, summarize each.
 
-## Never Auto-Submit
+## Important notes
 
-**Critical:** Always leave expense tickets as drafts. Robin-Manuel reviews and submits ("einreichen") manually.
+- **Critical: Never Auto-Submit** - Always leave expense tickets as drafts. Robin-Manuel reviews and submits ("einreichen") manually.
+- Hotels, Flights and Trains booked via Lanes and Planes and represented in an existing Lanes & Planes booking don't require an extra reciept to be uplaoded or attached. If a receipt for a one of those bookings is found, it can be ignored.
