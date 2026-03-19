@@ -124,6 +124,7 @@ cask "obs"
 mas "Authenticator", id: 1538761576
 cask "bitwarden"
 brew "bitwarden-cli"
+cask "1password"
 cask "notion"
 cask "audacity"
 cask "veracrypt"
@@ -141,6 +142,10 @@ cask "zoom"
 brew "ente-cli"
 cask "openvpn-connect"
 brew "screen-studio"
+cask "parallels"
+mas "Apple Remote Desktop", id: 409907375
+cask "anydesk"
+
 
 # macOS Tools
 # mas "Magent", id: 441258766 # Replaced by Raycast
@@ -148,13 +153,13 @@ cask "bartender"
 #cask "spotmenu"
 # mas "ToothFairy", id: 1191449274
 mas "Dato", id: 1470584107
-cask "karabiner-elements"
+# cask "karabiner-elements"
 cask "raycast"
 cask "switchresx"
 cask "keycastr"
 #cask "fluor"
 cask "macfuse"
-brew "whisper-cpp" # Probably not needed anymore, since we repalced the Raycast Whisper extension with sotto
+# brew "whisper-cpp" # Probably not needed anymore, since we replaced the Raycast Whisper extension with sotto
 brew "sox"
 cask "cleanshot"
 
@@ -167,3 +172,5 @@ cask "elgato-control-center"
 cask "elgato-stream-deck"
 cask "elgato-wave-link"
 cask "elgato-camera-hub"
+
+

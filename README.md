@@ -98,15 +98,18 @@ openclaw gateway start
 
 **Sync Skills:**
 
-This repository contains custom OpenClaw skills in the `Skills/` folder. To make them available to OpenClaw, run:
+This repository contains custom AI Agent skills in the `Skills/` folder.
+
+To make them available to OpenClaw, run:
 
 ```bash
-~/Source/Personal/setup/Skills/sync-openclaw.sh
+bash ./Skills/sync-openclaw.sh
 ```
 
 This creates symlinks from `~/.openclaw/workspace/skills/` to the skills in this repository, allowing you to version control your skills while keeping them synced with OpenClaw.
 
 **Available Skills:**
+
 - `lanes-planes-expenses` - Automate travel expense drafts in Lanes & Planes
 
 Run the sync script after cloning this repo or adding new skills.
