@@ -141,7 +141,7 @@ cask "claude"
 cask "zoom"
 brew "ente-cli"
 cask "openvpn-connect"
-brew "screen-studio"
+cask "screen-studio"
 cask "parallels"
 mas "Apple Remote Desktop", id: 409907375
 cask "anydesk"
