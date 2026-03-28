@@ -17,7 +17,7 @@ Automate drafting travel expenses in Lanes & Planes by:
 
 - **URL:** https://app.lanes-planes.com/
 - **Login:** Email + SSO (robin-manuel.thiel@jtl-software.com)
-- **Expense location:** Under "Tickets" (not a separate expenses section)
+- **Expense location:** Under "Tickets" (not a separate expenses section). URL: https://api.lanes-planes.com/org_admin/travel/bookings?filter%5Btiming%5D=past
 - **Email receipts:** Personal mailbox (robin-manuel@thiel1.de) and Work inbox (robin-manuel.thiel@jtl-software.com)
 
 ## Two Modes
