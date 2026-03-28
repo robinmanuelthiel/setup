@@ -47,11 +47,12 @@ Single trips can consist of multipe bookings ("Buchungen"), as transport and acc
 
 - Read and identify trip start/end dates
 - Check "Zweck der Reise" field
+- Identify which bookings belong to the same trip based on the purpose or way of transport
 - **Deduplicate:** Multiple bookings with same dates + same purpose = one travel period
 
 ### Step 2: Search Email for Receipts
 
-Use the Personal E-Mail Inbox (robin-manuel@thiel1.de) and the Work E-Mail Inbox (robin-manuel.thiel@jtl-software.com) to search for expenses that could be assiciated to the trips.
+Use the Personal E-Mail Inbox (robin-manuel@thiel1.de) and the Work E-Mail Inbox (robin-manuel.thiel@jtl-software.com) to search for expenses that could be assiciated to the trips, because they happend in the same time period. Search for receipts that could be associated with the trip, such as transport, accommodation, and other travel-related expenses.
 
 **Filter for:**
 
@@ -59,31 +60,77 @@ Use the Personal E-Mail Inbox (robin-manuel@thiel1.de) and the Work E-Mail Inbox
 - Taxi (Uber / Taxi / FreeNow rides)
 - Car Sharing (Miles / Car2Go / ShareNow rides)
 - Accommodation (Hotel, Airbnb)
+- Flights (Lufthansa, Swiss, Eurowings, EasyJet, etc.)
 
 **Ignore:**
 
 - Meal receipts (never file meals)
 - Personal purchases unrelated to travel
 
+### Step 3: Write an Trip and Expense Report
+
+For each trip, write a summary report of the trip and the identified expenses, including:
+
+- Name of the trip
+- Start and end dates
+- List of associated Lanes & Planes Bookings with Links
+- Identification of the main Lanes & Planes booking to attach expenses to
+- List of identified expenses for the trip (including Per Diem) with status
+- List of missing expenses/legs that could not be identified (e.g., travel to the airport/train station, last mile to the office)
+
+Think about all possible legs of the trip and identify those, that are not covered by a Lanes & Planes booking yet. Typical legs include:
+
+- Travel from home to the airport/train station (typically Uber)
+- Travel from the airport/train station to the destination (typically Miles, Uber, Taxi, Public Transport)
+- Trips at the destination (from the office to the hotel, from the hotel to the restaurant, etc.) - If a rental car was booked (e.g., via Miles), these legs are typically covered by the rental car, so no additional expenses should be expected for these legs.
+- Travel from the destination to the airport/train station (typically Miles, Uber, Taxi, Public Transport)
+- Travel from the airport/train station to home (typically Uber)
+
 ### Step 3: Draft Expense Ticket
 
 **In Lanes & Planes:**
 
-1. For each trip, identify one main booking to add expenses to
-2. Create new expense ticket (or find existing draft) for each expense ("Auslagen") in this booking
-3. Add line items:
-   - **Per Diem (Verpflegungsmehraufwand):** One line for entire travel period, assume no meals provided
+1. For each trip, identify one main booking to add the additional expenses to
+2. Open the main booking and add expenses ("Auslagen") line items of the following types to this booking:
    - **Auslagenbeleg:** One line per receipt found (attach/upload receipts if possible)
-4. Create an expense report (see below)
+   - **Per Diem (Verpflegungsmehraufwand):** One line for entire travel period, assume no meals provided
+   - **Kilometerpauschale:** Only use this, if there is a leg with my personal car involed. (unlikely)
+4. Write an expense report (see below)
 5. **DO NOT SUBMIT** - Leave as draft for Robin-Manuel to review
 
-**Expense report:**
+### Step 4: Write an Expense report
+
+For each trip, write a summary report of the expenses, including:
 
 - Name of the trip
+- Start and end dates
 - List of associated Lanes & Planes Bookings with Links
-- Link of the main Lanes & Planes booking to attach expenses to
+- Identification of the main Lanes & Planes booking to attach expenses to
 - List of identified expenses for the trip (including Per Diem) with status
-- List of missing expenses/legs (e.g., travel to the airport/train station, last mile to the office)
+- List of missing expenses/legs that could not be identified (e.g., travel to the airport/train station, last mile to the office)
+
+Report format:
+
+```
+✅ Processed [Trip Name + Dates]
+   Included Bookings:
+   - [Booking A + Link] (main)
+   - [Booking B + Link]
+   Expenses found: Z
+   - 🚧 [Receipt 1 details] - Warning: PDF could not be uploaded
+   - ✅ [Receipt 2 details]
+   - ❌ [Receipt 3 details]
+   - ✅ [Per diem details - €X (Y days)]
+   Missing expenses:
+   - Travel to the ZRH airport
+   - Last mile from CGN airport to the destination
+   Status: Draft created (not submitted)
+
+🔍 Searched [Date Range] in email
+   Found: [Count] transport/hotel receipts
+```
+
+If multiple trips, summarize each.
 
 ## Browser Automation Notes
 
@@ -106,32 +153,8 @@ Use the Personal E-Mail Inbox (robin-manuel@thiel1.de) and the Work E-Mail Inbox
 - Waiting for arbitrary timeouts
 - Assuming instant page loads
 
-## Output Format
-
-Report back:
-```
-✅ Processed [Trip Name/Dates]
-   Included Bookings:
-   - [Booking A + Link] (main)
-   - [Booking B + Link]
-   Expenses found: Z
-   - 🚧 [Receipt 1 details] - PDF could not be uloaded
-   - ✅ [Receipt 2 details]
-   - ❌ [Receipt 3 details]
-   - ✅ [Per diem detials - €X (Y days)]
-   Missing expenses:
-   - Travel to the ZRH airport
-   - Last mile from CGN airport to the destination
-   Status: Draft created (not submitted)
-
-🔍 Searched [Date Range] in email
-   Found: [Count] transport/hotel receipts
-```
-
-If multiple trips, summarize each.
-
 ## Important notes
 
 - **Critical: Never Auto-Submit** - Always leave expense tickets as drafts. Robin-Manuel reviews and submits ("einreichen") manually.
-- Hotels, Flights and Trains booked via Lanes and Planes and represented in an existing Lanes & Planes booking don't require an extra reciept to be uploaded or attached. If a receipt for a one of those bookings is found, it can be ignored.
+- Hotels, Flights and Trains booked via Lanes and Planes and represented in an existing Lanes & Planes booking don't require an extra receipt to be uploaded or attached. If a receipt for a one of those bookings is found in the E-Mails, it can be ignored.
 - My Home Address is "Wasserwerkstrasse 16, 8006 Zurich, Switzerland". If a trip location or leg location is this address, refer to it as "Home" in the expense reports
