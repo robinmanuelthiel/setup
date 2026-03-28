@@ -133,4 +133,5 @@ If multiple trips, summarize each.
 ## Important notes
 
 - **Critical: Never Auto-Submit** - Always leave expense tickets as drafts. Robin-Manuel reviews and submits ("einreichen") manually.
-- Hotels, Flights and Trains booked via Lanes and Planes and represented in an existing Lanes & Planes booking don't require an extra reciept to be uplaoded or attached. If a receipt for a one of those bookings is found, it can be ignored.
+- Hotels, Flights and Trains booked via Lanes and Planes and represented in an existing Lanes & Planes booking don't require an extra reciept to be uploaded or attached. If a receipt for a one of those bookings is found, it can be ignored.
+- My Home Address is "Wasserwerkstrasse 16, 8006 Zurich, Switzerland". If a trip location or leg location is this address, refer to it as "Home" in the expense reports
