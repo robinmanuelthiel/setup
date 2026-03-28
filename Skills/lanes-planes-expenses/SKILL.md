@@ -54,6 +54,8 @@ Single trips can consist of multipe bookings ("Buchungen"), as transport and acc
 
 Use the Personal E-Mail Inbox (robin-manuel@thiel1.de) and the Work E-Mail Inbox (robin-manuel.thiel@jtl-software.com) to search for expenses that could be assiciated to the trips, because they happend in the same time period. Search for receipts that could be associated with the trip, such as transport, accommodation, and other travel-related expenses.
 
+**MUST search both inboxes for every trip.** Only write a "Missing expenses" entry after actually searching. Each missing entry must state what was searched and not found, e.g.: "Uber to ZRH (Dec 11) – searched both inboxes for Uber/taxi Dec 10-12, not found."
+
 **Filter for:**
 
 - Railway (Deutsche Bahn, SBB, train tickets)
@@ -66,6 +68,27 @@ Use the Personal E-Mail Inbox (robin-manuel@thiel1.de) and the Work E-Mail Inbox
 
 - Meal receipts (never file meals)
 - Personal purchases unrelated to travel
+
+### Obtaining the real receipt PDF
+
+For each expense found in email, you need the **actual receipt PDF** -- not a screenshot of the email. How to get it:
+
+**Uber:**
+- Uber emails contain a **"Download the receipt in a PDF format" / "Download PDF"** link in the email body.
+- Open the email in Outlook web (use the email's WebLink URL from the Graph API search result), find this button, and click it to download the PDF.
+- Outlook SafeLinks (eur02.safelinks.protection.outlook.com) do **not expire** -- these links are valid indefinitely.
+- If a SafeLink fails or the Uber session requires login, fall back to the **Uber website**: https://riders.uber.com/trips -- find the trip by date and download the receipt PDF from there.
+- Do NOT upload the HTML email body or a screenshot as the receipt. Only the PDF from the "Download PDF" button is valid.
+
+**MILES / Car Sharing:**
+- MILES sends a PDF invoice as an email attachment. Download the attachment directly from the email.
+
+**Deutsche Bahn / SBB:**
+- Train tickets are typically PDF attachments or can be downloaded from the DB/SBB booking confirmation email.
+
+**Hotels:**
+- If booked via Lanes & Planes, no separate receipt needed (the booking IS the record).
+- If booked independently (Airbnb, booking.com), the confirmation email PDF or invoice attachment is the receipt.
 
 ### Step 3: Write an Trip and Expense Report
 
@@ -122,8 +145,8 @@ Report format:
    - ❌ [Receipt 3 details]
    - ✅ [Per diem details - €X (Y days)]
    Missing expenses:
-   - Travel to the ZRH airport
-   - Last mile from CGN airport to the destination
+   - Travel to the ZRH airport – searched both inboxes for Uber/taxi on [date], not found
+   - Last mile from CGN airport to the destination – searched both inboxes for Uber/taxi/MILES on [date], not found
    Status: Draft created (not submitted)
 
 🔍 Searched [Date Range] in email
@@ -131,6 +154,47 @@ Report format:
 ```
 
 If multiple trips, summarize each.
+
+## Uploading Receipt PDFs to Lanes & Planes
+
+The L&P expense form uses a **Dropzone.js** drag-and-drop widget that cannot be automated via standard browser file input methods. Use the following approach instead:
+
+### Working Upload Method (Active Storage Direct Upload)
+
+1. **Create a direct upload blob** -- from within the browser page context (using `fetch` with session credentials):
+   ```js
+   const resp = await fetch('https://api.lanes-planes.com/rails/active_storage/direct_uploads', {
+     method: 'POST',
+     headers: { 'Content-Type': 'application/json', 'X-CSRF-Token': CSRF_TOKEN },
+     credentials: 'include',
+     body: JSON.stringify({ blob: {
+       filename: 'receipt.pdf',
+       content_type: 'application/pdf',
+       byte_size: FILE_SIZE,       // bytes
+       checksum: BASE64_MD5        // openssl dgst -md5 -binary file | base64
+     }})
+   });
+   const { signed_id, direct_upload } = await resp.json();
+   ```
+   Get `CSRF_TOKEN` from `document.querySelector('meta[name=csrf-token]').content`.
+   Get `FILE_SIZE` and `BASE64_MD5` from the local PDF file via exec/shell.
+
+2. **PUT the PDF bytes** to `direct_upload.url` -- from terminal (no auth required):
+   ```sh
+   curl -X PUT -H "Content-Type: application/pdf" --data-binary @receipt.pdf "<direct_upload.url>"
+   # Expects HTTP 204
+   ```
+
+3. **Inject the `signed_id`** into the form and save -- from browser page context:
+   ```js
+   document.querySelector('input[name="receipt_entity_profile[uploads][]"]').value = signed_id;
+   document.querySelector('button[type=submit]').click();
+   ```
+
+### Notes
+- The edit page URL for an expense is: `https://api.lanes-planes.com/org_admin/travel/bookings/[BOOKING_ID]/receipt_entity/profiles/[EXP_ID]/edit`
+- The view page (to confirm upload success) is the same without `/edit`
+- After save, a "Scan" section appears on the view page showing the uploaded PDF
 
 ## Browser Automation Notes
 
