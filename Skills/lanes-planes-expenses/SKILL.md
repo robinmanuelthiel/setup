@@ -122,11 +122,6 @@ Use access to my E-Mail to search for expenses that could be associated to the t
 
 If you cannot obtain a real PDF, **do not upload a substitute**. Leave the expense as draft and document it under **Missing expenses** (including what you searched and where).
 
-**Validation checklist (before upload):**
-- File is actually a PDF (magic bytes start with `%PDF-`)
-- Content type is `application/pdf`
-- Receipt content matches the expected **vendor + date + amount + currency** (spot-check visually, or extract text if needed)
-
 **Uber (preferred):**
 - Use the Uber Riders portal: https://riders.uber.com/trips
 - Open the correct trip by date/time, click **Download PDF** on the trip details page.
@@ -142,6 +137,8 @@ If you cannot obtain a real PDF, **do not upload a substitute**. Leave the expen
 **Hotels:**
 - If booked via Lanes & Planes: usually no extra receipt upload needed (the booking is the record).
 - If booked independently (Airbnb, booking.com): use the **invoice/receipt PDF** (attachment or portal download), not a screenshot.
+
+**Important:** When downloading a file, rename it to a descriptive name including the vendor, date and amount in this format: `uber-2026-01-16-zurich-chf20.25.pdf`.
 
 ### Step 4: Update the expense report with identified expenses and missing legs
 
