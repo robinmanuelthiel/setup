@@ -71,24 +71,33 @@ Use the Personal E-Mail Inbox (robin-manuel@thiel1.de) and the Work E-Mail Inbox
 
 ### Obtaining the real receipt PDF
 
-For each expense found in email, you need the **actual receipt PDF** -- not a screenshot of the email. How to get it:
+**Hard requirement:** Only upload a **real, provider-issued PDF receipt**. Never use:
+- screenshots (browser or email)
+- "Print to PDF" output of an email/webpage
+- HTML-to-PDF conversions of email bodies
 
-**Uber:**
-- Uber emails contain a **"Download the receipt in a PDF format" / "Download PDF"** link in the email body.
-- Open the email in Outlook web (use the email's WebLink URL from the Graph API search result), find this button, and click it to download the PDF.
-- Outlook SafeLinks (eur02.safelinks.protection.outlook.com) do **not expire** -- these links are valid indefinitely.
-- If a SafeLink fails or the Uber session requires login, fall back to the **Uber website**: https://riders.uber.com/trips -- find the trip by date and download the receipt PDF from there.
-- Do NOT upload the HTML email body or a screenshot as the receipt. Only the PDF from the "Download PDF" button is valid.
+If you cannot obtain a real PDF, **do not upload a substitute**. Leave the expense as draft and document it under **Missing expenses** (including what you searched and where).
+
+**Validation checklist (before upload):**
+- File is actually a PDF (magic bytes start with `%PDF-`)
+- Content type is `application/pdf`
+- Receipt content matches the expected **vendor + date + amount + currency** (spot-check visually, or extract text if needed)
+
+**Uber (preferred):**
+- Use the Uber Riders portal: https://riders.uber.com/trips
+- Open the correct trip by date/time, click **Download PDF** on the trip details page.
+- If starting from an email: you may click the email's **"Download the receipt in a PDF format" / "Download PDF"** link, but still apply the validation checklist above.
+- If the link fails or requires login, fall back to the Riders portal.
 
 **MILES / Car Sharing:**
-- MILES sends a PDF invoice as an email attachment. Download the attachment directly from the email.
+- Prefer the **PDF invoice attachment** in the email. Download the attachment directly.
 
 **Deutsche Bahn / SBB:**
-- Train tickets are typically PDF attachments or can be downloaded from the DB/SBB booking confirmation email.
+- Train tickets are typically **PDF attachments** or can be downloaded from the booking confirmation.
 
 **Hotels:**
-- If booked via Lanes & Planes, no separate receipt needed (the booking IS the record).
-- If booked independently (Airbnb, booking.com), the confirmation email PDF or invoice attachment is the receipt.
+- If booked via Lanes & Planes: usually no extra receipt upload needed (the booking is the record).
+- If booked independently (Airbnb, booking.com): use the **invoice/receipt PDF** (attachment or portal download), not a screenshot.
 
 ### Step 3: Write an Trip and Expense Report
 
@@ -177,7 +186,20 @@ The L&P expense form uses a **Dropzone.js** drag-and-drop widget that cannot be 
    const { signed_id, direct_upload } = await resp.json();
    ```
    Get `CSRF_TOKEN` from `document.querySelector('meta[name=csrf-token]').content`.
-   Get `FILE_SIZE` and `BASE64_MD5` from the local PDF file via exec/shell.
+
+   Before uploading, **validate you have a real PDF receipt** (not a screenshot, not an email printout):
+   ```sh
+   file -b receipt.pdf          # should mention PDF
+   head -c 5 receipt.pdf        # should print %PDF-
+   ```
+
+   Always use a **freshly obtained** receipt PDF for the specific expense (do not reuse old files from previous runs).
+
+   Get `FILE_SIZE` and `BASE64_MD5` from the local PDF file via exec/shell:
+   ```sh
+   FILE_SIZE=$(stat -f%z receipt.pdf)
+   BASE64_MD5=$(openssl dgst -md5 -binary receipt.pdf | base64)
+   ```
 
 2. **PUT the PDF bytes** to `direct_upload.url` -- from terminal (no auth required):
    ```sh
