@@ -9,16 +9,15 @@ Automate drafting travel expenses in Lanes & Planes by:
 
 1. Finding and grouping open trips (auto-scan or user-specified)
 2. Calculating per diem (Mehrkostenpauschale)
-3. Searching email for transport/hotel receipts
-4. Adding additional expenses associated to the trips
+3. Searching email for transport/hotel receipts or invoices associated with the trips
+4. Adding the additional expenses to the trips
 5. Drafting expense report (never auto-submit)
 
 ## Access
 
 - **URL:** https://app.lanes-planes.com/
-- **Login:** Email + SSO (robin-manuel.thiel@jtl-software.com)
-- **Expense location:** Under "Tickets" (not a separate expenses section). URL: https://api.lanes-planes.com/org_admin/travel/bookings?filter%5Btiming%5D=past
-- **Email receipts:** Personal mailbox (robin-manuel@thiel1.de) and Work inbox (robin-manuel.thiel@jtl-software.com)
+- **Login:** Email + SSO
+- **Expense filing location:** Under "Tickets" (not a separate expenses section). URL: https://api.lanes-planes.com/org_admin/travel/bookings?filter%5Btiming%5D=past
 
 ## Two Modes
 
@@ -41,22 +40,67 @@ User says: "File expenses for my Berlin trip" or "Complete the January 15th trip
 
 ## Workflow Per Trip
 
-### Step 1: Identify Travel Period and associated Trips
+### Step 1: Identify Travel Period and associated bookings
 
 Single trips can consist of multipe bookings ("Buchungen"), as transport and accommodation can be booked individually.
 
 - Read and identify trip start/end dates
-- Check "Zweck der Reise" field
+- Check the purpose of the trip ("Zweck der Reise") field
 - Identify which bookings belong to the same trip based on the purpose or way of transport
 - **Deduplicate:** Multiple bookings with same dates + same purpose = one travel period
+- Identify one main booking per trip to attach expenses to (typically the one with the most comprehensive travel details, e.g., flight or hotel booking)
 
-### Step 2: Search Email for Receipts
+### Step 2: Draft an Expense Report for each trip
 
-Use the Personal E-Mail Inbox (robin-manuel@thiel1.de) and the Work E-Mail Inbox (robin-manuel.thiel@jtl-software.com) to search for expenses that could be assiciated to the trips, because they happend in the same time period. Search for receipts that could be associated with the trip, such as transport, accommodation, and other travel-related expenses.
+Create a new document to track the status for the session.
 
-**MUST search both inboxes for every trip.** Only write a "Missing expenses" entry after actually searching. Each missing entry must state what was searched and not found, e.g.: "Uber to ZRH (Dec 11) – searched both inboxes for Uber/taxi Dec 10-12, not found."
+For each trip, the expense report includes:
 
-**Filter for:**
+- Name of the trip
+- Start and end dates
+- List of associated Lanes & Planes Bookings with Links
+- Identification of the main Lanes & Planes booking to attach expenses to
+- List of identified expenses for the trip (including Per Diem) with status
+- List of missing expenses/legs that could not be identified (e.g., travel to the airport/train station, last mile to the office)
+
+Report format:
+
+```
+✅ Processed [Trip Name + Dates]
+   Included Bookings:
+   - [Booking A + Link] (main)
+   - [Booking B + Link]
+   Expenses found: Z
+   - 🚧 [Receipt X details] - <STATUS> - <OPTIONAL_MESSAGE>
+   - 🚧 [Receipt 1 details] - created without receipt - Warning: PDF could not be uploaded
+   - ✅ [Receipt 2 details]
+   - ❌ [Receipt 3 details]
+   - ✅ [Per diem details - €X (Y days)]
+   Missing expenses:
+   - Travel to the ZRH airport – searched both inboxes for Uber/taxi on [date], not found
+   - Last mile from CGN airport to the destination – searched both inboxes for Uber/taxi/MILES on [date], not found
+   Status: Draft created (not submitted)
+
+🔍 Searched [Date Range] in email
+   Found: [Count] transport/hotel receipts
+```
+
+Valid `STATUS` values:
+
+- 🚧 found with receipt
+- ❌ found without receipt
+- ❌ created without receipt
+- ✅ created with receipt
+
+If multiple trips, summarize each.
+
+### Step 3: Search Email for Receipts
+
+Use access to my E-Mail to search for expenses that could be associated to the trips, because they happend in the same time period. Search for receipts that could be associated with the trip, such as transport, accommodation, and other travel-related expenses but include 30 days before and after the trip dates in your search to account for early bookings and late receipts.
+
+**MUST search both inboxes for every trip.** Only write a "Missing expenses" entry after actually searching. Each missing entry must state what was searched and not found.
+
+**Search for:**
 
 - Railway (Deutsche Bahn, SBB, train tickets)
 - Taxi (Uber / Taxi / FreeNow rides)
@@ -99,16 +143,9 @@ If you cannot obtain a real PDF, **do not upload a substitute**. Leave the expen
 - If booked via Lanes & Planes: usually no extra receipt upload needed (the booking is the record).
 - If booked independently (Airbnb, booking.com): use the **invoice/receipt PDF** (attachment or portal download), not a screenshot.
 
-### Step 3: Write an Trip and Expense Report
+### Step 4: Update the expense report with identified expenses and missing legs
 
-For each trip, write a summary report of the trip and the identified expenses, including:
-
-- Name of the trip
-- Start and end dates
-- List of associated Lanes & Planes Bookings with Links
-- Identification of the main Lanes & Planes booking to attach expenses to
-- List of identified expenses for the trip (including Per Diem) with status
-- List of missing expenses/legs that could not be identified (e.g., travel to the airport/train station, last mile to the office)
+Update the expense report form the previous step. List all expenses and their status.
 
 Think about all possible legs of the trip and identify those, that are not covered by a Lanes & Planes booking yet. Typical legs include:
 
@@ -118,7 +155,7 @@ Think about all possible legs of the trip and identify those, that are not cover
 - Travel from the destination to the airport/train station (typically Miles, Uber, Taxi, Public Transport)
 - Travel from the airport/train station to home (typically Uber)
 
-### Step 4: Draft Expense Ticket
+### Step 5: Draft Expense Line items
 
 **In Lanes & Planes:**
 
@@ -128,41 +165,11 @@ Think about all possible legs of the trip and identify those, that are not cover
    - **Per Diem (Verpflegungsmehraufwand):** One line for entire travel period, assume no meals provided
    - **Kilometerpauschale:** Only use this, if there is a leg with my personal car involed. (unlikely)
 4. Write an expense report (see below)
-5. **DO NOT SUBMIT** - Leave as draft for Robin-Manuel to review
+5. **DO NOT SUBMIT** - Leave as draft for a human to review
 
-### Step 4: Write an Expense report
+### Step 6: Update the Expense report
 
-For each trip, write a summary report of the expenses, including:
-
-- Name of the trip
-- Start and end dates
-- List of associated Lanes & Planes Bookings with Links
-- Identification of the main Lanes & Planes booking to attach expenses to
-- List of identified expenses for the trip (including Per Diem) with status
-- List of missing expenses/legs that could not be identified (e.g., travel to the airport/train station, last mile to the office)
-
-Report format:
-
-```
-✅ Processed [Trip Name + Dates]
-   Included Bookings:
-   - [Booking A + Link] (main)
-   - [Booking B + Link]
-   Expenses found: Z
-   - 🚧 [Receipt 1 details] - Warning: PDF could not be uploaded
-   - ✅ [Receipt 2 details]
-   - ❌ [Receipt 3 details]
-   - ✅ [Per diem details - €X (Y days)]
-   Missing expenses:
-   - Travel to the ZRH airport – searched both inboxes for Uber/taxi on [date], not found
-   - Last mile from CGN airport to the destination – searched both inboxes for Uber/taxi/MILES on [date], not found
-   Status: Draft created (not submitted)
-
-🔍 Searched [Date Range] in email
-   Found: [Count] transport/hotel receipts
-```
-
-If multiple trips, summarize each.
+Update the expense report form the previous steps again. For each identified expense, update the status.
 
 ## Browser Automation Notes
 
@@ -187,7 +194,7 @@ If multiple trips, summarize each.
 
 **Uploading Receipt PDFs to Lanes & Planes:**
 
-The L&P expense form uses a **Dropzone.js** drag-and-drop widget that cannot be automated via standard browser file input methods. Use the following approach instead:
+The Lanes & Planes expense form uses a **Dropzone.js** drag-and-drop widget that cannot be automated via standard browser file input methods. Use the following approach instead:
 
 Working Upload Method (Active Storage Direct Upload):
 
@@ -242,6 +249,13 @@ Notes:
 
 ## Important notes
 
-- **Critical: Never Auto-Submit** - Always leave expense tickets as drafts. Robin-Manuel reviews and submits ("einreichen") manually.
+- **Critical: Never Auto-Submit** - Always leave expense tickets as drafts. A human reviews and submits ("einreichen") manually.
 - Hotels, Flights and Trains booked via Lanes and Planes and represented in an existing Lanes & Planes booking don't require an extra receipt to be uploaded or attached. If a receipt for a one of those bookings is found in the E-Mails, it can be ignored.
+
+## Personalization
+
+- My Login to Lanes & Planes is via SSO with the email `robin-manuel.thiel@jtl-software.com`
+- Reciepts can be found in the Personal mailbox (robin-manuel@thiel1.de) and Work inbox (robin-manuel.thiel@jtl-software.com)
+- Expense reports should be created in Obsidian under `01 Projects/` with the name `Expenses <DATE_RANGE>` (e.g., `Expenses Jan 1 - Mar 5 2026`)
+- When searching for receipts in my E-Mail filter for the `Expenses` category in both inboxes, as all expenses are categorized with this category in my E-Mail. If you don't find receipts or invoices for missing legs, ask the human to also search the entire inbox without the `Expenses` category filter, as sometimes receipts are not categorized correctly.
 - My Home Address is "Wasserwerkstrasse 16, 8006 Zurich, Switzerland". If a trip location or leg location is this address, refer to it as "Home" in the expense reports
