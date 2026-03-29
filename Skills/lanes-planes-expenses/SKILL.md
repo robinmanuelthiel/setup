@@ -69,7 +69,7 @@ Use the Personal E-Mail Inbox (robin-manuel@thiel1.de) and the Work E-Mail Inbox
 - Meal receipts (never file meals)
 - Personal purchases unrelated to travel
 
-### Obtaining the real receipt PDF
+#### Obtaining the real receipt PDF
 
 **Hard requirement:** Only upload a **real, provider-issued PDF receipt**. Never use:
 - screenshots (browser or email)
@@ -118,7 +118,7 @@ Think about all possible legs of the trip and identify those, that are not cover
 - Travel from the destination to the airport/train station (typically Miles, Uber, Taxi, Public Transport)
 - Travel from the airport/train station to home (typically Uber)
 
-### Step 3: Draft Expense Ticket
+### Step 4: Draft Expense Ticket
 
 **In Lanes & Planes:**
 
@@ -164,11 +164,32 @@ Report format:
 
 If multiple trips, summarize each.
 
-## Uploading Receipt PDFs to Lanes & Planes
+## Browser Automation Notes
+
+**Expect timeouts.** Lanes & Planes can be slow. When timeouts occur:
+
+- Retry the action
+- Use direct URLs when possible
+- Reduce actions per page
+- Continue with workarounds rather than stopping
+
+**Prefer:**
+
+- Direct navigation to ticket/booking URLs
+- Fewer clicks per page
+- Waiting for explicit UI state changes
+
+**Avoid:**
+
+- Complex multi-step sequences without checkpoints
+- Waiting for arbitrary timeouts
+- Assuming instant page loads
+
+**Uploading Receipt PDFs to Lanes & Planes:**
 
 The L&P expense form uses a **Dropzone.js** drag-and-drop widget that cannot be automated via standard browser file input methods. Use the following approach instead:
 
-### Working Upload Method (Active Storage Direct Upload)
+Working Upload Method (Active Storage Direct Upload):
 
 1. **Create a direct upload blob** -- from within the browser page context (using `fetch` with session credentials):
    ```js
@@ -213,31 +234,11 @@ The L&P expense form uses a **Dropzone.js** drag-and-drop widget that cannot be 
    document.querySelector('button[type=submit]').click();
    ```
 
-### Notes
+Notes:
+
 - The edit page URL for an expense is: `https://api.lanes-planes.com/org_admin/travel/bookings/[BOOKING_ID]/receipt_entity/profiles/[EXP_ID]/edit`
 - The view page (to confirm upload success) is the same without `/edit`
 - After save, a "Scan" section appears on the view page showing the uploaded PDF
-
-## Browser Automation Notes
-
-**Expect timeouts.** Lanes & Planes can be slow. When timeouts occur:
-
-- Retry the action
-- Use direct URLs when possible
-- Reduce actions per page
-- Continue with workarounds rather than stopping
-
-**Prefer:**
-
-- Direct navigation to ticket/booking URLs
-- Fewer clicks per page
-- Waiting for explicit UI state changes
-
-**Avoid:**
-
-- Complex multi-step sequences without checkpoints
-- Waiting for arbitrary timeouts
-- Assuming instant page loads
 
 ## Important notes
 
