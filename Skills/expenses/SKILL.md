@@ -1,5 +1,5 @@
 ---
-name: lanes-planes-expenses
+name: expenses
 description: Automate travel expense drafts in Lanes & Planes (work travel booking and expensing system). Use when the user asks to file expenses, complete expense tickets, process trips, or search for receipts in Lanes & Planes. Supports both auto-scan (all open trips) and manual (specific trip) modes. Searches email for transport/hotel/accommodation receipts, files expense reposts and calculates per diem.
 ---
 
