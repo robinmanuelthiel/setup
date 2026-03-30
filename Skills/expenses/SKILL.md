@@ -11,7 +11,7 @@ Automate drafting travel expenses in Lanes & Planes by:
 2. Calculating per diem (Mehrkostenpauschale)
 3. Searching email for transport/hotel receipts or invoices associated with the trips
 4. Adding the additional expenses to the trips
-5. Drafting expense report (never auto-submit)
+5. Create a detailed expense report summarizing the process, identified expenses, and missing legs/expenses
 
 ## Access
 
@@ -61,9 +61,87 @@ For each trip, the expense report includes:
 - List of associated Lanes & Planes Bookings with Links
 - Identification of the main Lanes & Planes booking to attach expenses to
 - List of identified expenses for the trip (including Per Diem) with status
-- List of missing expenses/legs that could not be identified (e.g., travel to the airport/train station, last mile to the office)
+- List of potentially missing expenses/legs that could not be identified (e.g., travel to the airport/train station, last mile to the office)
 
-Report format:
+### Step 3: Search Email for Receipts
+
+Use access to my E-Mail to search for expenses that could be associated to the trips, because they happend in the same time period. Search for receipts that could be associated with the trip, such as transport, accommodation, and other travel-related expenses but include 30 days before and after the trip dates in your search to account for early bookings and late receipts.
+
+**MUST search both inboxes for every trip.** Only write a "Missing expenses" entry after actually searching. Each missing entry must state what was searched and not found.
+
+**Search for:**
+
+- Railway (Deutsche Bahn, SBB, train tickets)
+- Taxi (Uber / Taxi / FreeNow rides)
+- Car Sharing (Miles / Car2Go / ShareNow rides)
+- Accommodation (Hotel, Airbnb)
+- Flights (Lufthansa, Swiss, Eurowings, EasyJet, etc.)
+
+**Ignore:**
+
+- Meal receipts (never file meals)
+- Personal purchases unrelated to travel
+
+#### Obtaining the real receipt PDF
+
+If not already uploaded to a Lanes & Planes expense ticket, a receipt or invoice must be obtained for each identified expense. This is critical for compliance and audit purposes. In this step, the receipt should not be uploaded yet. This step comes later.
+
+**Hard requirement:** Only upload a **real, provider-issued PDF receipt**. Never use:
+- screenshots (browser or email)
+- "Print to PDF" output of an email/webpage
+- HTML-to-PDF conversions of email bodies
+
+If you cannot obtain a real PDF, **do not upload a substitute**. Leave the expense as draft and document it under **Missing expenses** (including what you searched and where).
+
+**Uber (preferred):**
+- Use the Uber Riders portal: https://riders.uber.com/trips
+- Open the correct trip by date/time, click **Download PDF** on the trip details page.
+- If starting from an email: you may click the email's **"Download the receipt in a PDF format" / "Download PDF"** link, but still apply the validation checklist above.
+- If the link fails or requires login, fall back to the Riders portal.
+
+**MILES / Car Sharing:**
+- Prefer the **PDF invoice attachment** in the email. Download the attachment directly.
+
+**Deutsche Bahn / SBB:**
+- Train tickets are typically **PDF attachments** or can be downloaded from the booking confirmation.
+
+**Hotels:**
+- If booked via Lanes & Planes: usually no extra receipt upload needed (the booking is the record).
+- If booked independently (Airbnb, booking.com): use the **invoice/receipt PDF** (attachment or portal download), not a screenshot.
+
+**Important:** When downloading a file, rename it to a descriptive name including the vendor, date and amount in this format: `<date>-<vendor>-<location>-<currency><amount>.pdf` (e.g., `2026-01-16-uber-zurich-chf20.25.pdf`).
+
+### Step 4: Update the expense report with identified expenses and missing legs
+
+Update the expense report created in the previous steps. List all expenses and their status for each booking.
+
+Think about all possible legs of the trip and identify those, that are not covered by a Lanes & Planes booking yet. Typical legs include:
+
+- Travel from home to the airport/train station (typically Uber)
+- Travel from the airport/train station to the destination (typically Miles, Uber, Taxi, Public Transport)
+- Trips at the destination (from the office to the hotel, from the hotel to the restaurant, etc.) - If a rental car was booked (e.g., via Miles), these legs are typically covered by the rental car, so no additional expenses should be expected for these legs.
+- Travel from the destination to the airport/train station (typically Miles, Uber, Taxi, Public Transport)
+- Travel from the airport/train station to home (typically Uber)
+
+### Step 5: Draft Expense Line items
+
+Now it's time to add the identified expenses to the main booking in Lanes & Planes as line items. Each line item should have the correct type (Auslagenbeleg, Per Diem, Kilometerpauschale) and be attached to the main booking for the trip. **Upload** the receipts for each expense line item where possible.
+
+**In Lanes & Planes:**
+
+1. For each trip, identify one main booking to add the additional expenses to
+2. Open the main booking in Lanes & Planes and add expenses ("Auslagen") line items of the following types to this booking:
+   - **Auslagenbeleg:** One line per receipt found (attach/upload receipts if possible)
+   - **Per Diem (Verpflegungsmehraufwand):** One line for entire travel period, assume no meals provided
+   - **Kilometerpauschale:** Only use this, if there is a leg with my personal car involed. (unlikely)
+4. Write an expense report (see below)
+5. **DO NOT SUBMIT** - Leave as draft for a human to review
+
+### Step 6: Update the Expense report
+
+Update the expense report created in the previous steps again. For each identified expense, update the status including the receipt upload status.
+
+## Expense report format
 
 ```
 ✅ Processed [Trip Name + Dates]
@@ -93,80 +171,6 @@ Valid `STATUS` values:
 - ✅ created with receipt
 
 If multiple trips, summarize each.
-
-### Step 3: Search Email for Receipts
-
-Use access to my E-Mail to search for expenses that could be associated to the trips, because they happend in the same time period. Search for receipts that could be associated with the trip, such as transport, accommodation, and other travel-related expenses but include 30 days before and after the trip dates in your search to account for early bookings and late receipts.
-
-**MUST search both inboxes for every trip.** Only write a "Missing expenses" entry after actually searching. Each missing entry must state what was searched and not found.
-
-**Search for:**
-
-- Railway (Deutsche Bahn, SBB, train tickets)
-- Taxi (Uber / Taxi / FreeNow rides)
-- Car Sharing (Miles / Car2Go / ShareNow rides)
-- Accommodation (Hotel, Airbnb)
-- Flights (Lufthansa, Swiss, Eurowings, EasyJet, etc.)
-
-**Ignore:**
-
-- Meal receipts (never file meals)
-- Personal purchases unrelated to travel
-
-#### Obtaining the real receipt PDF
-
-**Hard requirement:** Only upload a **real, provider-issued PDF receipt**. Never use:
-- screenshots (browser or email)
-- "Print to PDF" output of an email/webpage
-- HTML-to-PDF conversions of email bodies
-
-If you cannot obtain a real PDF, **do not upload a substitute**. Leave the expense as draft and document it under **Missing expenses** (including what you searched and where).
-
-**Uber (preferred):**
-- Use the Uber Riders portal: https://riders.uber.com/trips
-- Open the correct trip by date/time, click **Download PDF** on the trip details page.
-- If starting from an email: you may click the email's **"Download the receipt in a PDF format" / "Download PDF"** link, but still apply the validation checklist above.
-- If the link fails or requires login, fall back to the Riders portal.
-
-**MILES / Car Sharing:**
-- Prefer the **PDF invoice attachment** in the email. Download the attachment directly.
-
-**Deutsche Bahn / SBB:**
-- Train tickets are typically **PDF attachments** or can be downloaded from the booking confirmation.
-
-**Hotels:**
-- If booked via Lanes & Planes: usually no extra receipt upload needed (the booking is the record).
-- If booked independently (Airbnb, booking.com): use the **invoice/receipt PDF** (attachment or portal download), not a screenshot.
-
-**Important:** When downloading a file, rename it to a descriptive name including the vendor, date and amount in this format: `uber-2026-01-16-zurich-chf20.25.pdf`.
-
-### Step 4: Update the expense report with identified expenses and missing legs
-
-Update the expense report form the previous step. List all expenses and their status.
-
-Think about all possible legs of the trip and identify those, that are not covered by a Lanes & Planes booking yet. Typical legs include:
-
-- Travel from home to the airport/train station (typically Uber)
-- Travel from the airport/train station to the destination (typically Miles, Uber, Taxi, Public Transport)
-- Trips at the destination (from the office to the hotel, from the hotel to the restaurant, etc.) - If a rental car was booked (e.g., via Miles), these legs are typically covered by the rental car, so no additional expenses should be expected for these legs.
-- Travel from the destination to the airport/train station (typically Miles, Uber, Taxi, Public Transport)
-- Travel from the airport/train station to home (typically Uber)
-
-### Step 5: Draft Expense Line items
-
-**In Lanes & Planes:**
-
-1. For each trip, identify one main booking to add the additional expenses to
-2. Open the main booking and add expenses ("Auslagen") line items of the following types to this booking:
-   - **Auslagenbeleg:** One line per receipt found (attach/upload receipts if possible)
-   - **Per Diem (Verpflegungsmehraufwand):** One line for entire travel period, assume no meals provided
-   - **Kilometerpauschale:** Only use this, if there is a leg with my personal car involed. (unlikely)
-4. Write an expense report (see below)
-5. **DO NOT SUBMIT** - Leave as draft for a human to review
-
-### Step 6: Update the Expense report
-
-Update the expense report form the previous steps again. For each identified expense, update the status.
 
 ## Browser Automation Notes
 
