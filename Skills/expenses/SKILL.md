@@ -143,34 +143,62 @@ Update the expense report created in the previous steps again. For each identifi
 
 ## Expense report format
 
+```markdown
+## Trip <NUMNER>: <NAME> <LOCATION> <DATES>
+
+**Travel period:** <START_DATE> - <END_DATE>
+
+### Associated Bookings
+
+| ID | Type | Description | Date | Link |
+|----|------|-------------|------|------|
+| <ID> (main)| <TYPE> | <FROM> - <TO> | <DATE>> | [View](https://api.lanes-planes.com/org_admin/travel/bookings/<MAIN_ID>) |
+| <ID> | <TYPE> | <FROM> - <TO> | <DATE>> | [View](https://api.lanes-planes.com/org_admin/travel/bookings/<ANOTHER_ID>) |
+
+### Expenses
+
+- [ ] <STATUS_EMOJI> [Per Diem - <CURRENCY> <AMOUNT>](https://api.lanes-planes.com/org_admin/travel/bookings/<MAIN_ID>/receipt_entity/profiles/<EXPENSE_ID>)
+- [ ] <STATUS_EMOJI> [<TYPE> Reciept - <DATE> - <CURRENCY> <AMOUNT>](https://api.lanes-planes.com/org_admin/travel/bookings/<MAIN_ID>/receipt_entity/profiles/<EXPENSE_ID>) - _<COMMENT>_
+
+### Missing expenses
+
+- [ ] <EXPENSE_DESCRIPTION> - searched for <SEARCH_TERMS> on <DATE_RANGE> - _<Comment>_
 ```
-✅ Processed [Trip Name + Dates]
-   Included Bookings:
-   - [Booking A + Link] (main)
-   - [Booking B + Link]
-   Expenses found: Z
-   - 🚧 [Receipt X details] - <STATUS> - <OPTIONAL_MESSAGE>
-   - 🚧 [Receipt 1 details] - created without receipt - Warning: PDF could not be uploaded
-   - ✅ [Receipt 2 details]
-   - ❌ [Receipt 3 details]
-   - ✅ [Per diem details - €X (Y days)]
-   Missing expenses:
-   - Travel to the ZRH airport – searched both inboxes for Uber/taxi on [date], not found
-   - Last mile from CGN airport to the destination – searched both inboxes for Uber/taxi/MILES on [date], not found
-   Status: Draft created (not submitted)
 
-🔍 Searched [Date Range] in email
-   Found: [Count] transport/hotel receipts
+Valid `<STATUS_EMOJI>` values are:
+
+- 📋 Reciept found but not uploaded
+- ❌ No reciept found or other error
+- ✅ Reciept found and not uploaded
+
+**Important:** Leave all check-boxes unchecked, even for completed expenses. This is a visual indicator that the expense still needs to be reviewed and submitted by a human. The checkboxes are only for tracking the status of the expense by a human.
+
+**Example:**
+
+```markdown
+## Trip 1: Foo Conference Berlin Jan 15-17 2026
+
+**Travel period:** Jan 15 - Jan 17 2026
+
+### Associated Bookings
+
+| ID | Type | Description | Date | Link |
+|----|------|-------------|------|------|
+| 1234567 (main)| Flight | ZRH - BER | Jan 15, 2026 | [View](https://api.lanes-planes.com/org_admin/travel/bookings/1234567) |
+| 2345678 | Car Rental | Enterprise CGN -> DUS | Jan 15-17, 2026 | [View](https://api.lanes-planes.com/org_admin/travel/bookings/2345678) |
+| 3456789 | Hotel + Flight | Enterprise CGN -> DUS | Jan 15-17, 2026 | [View](https://api.lanes-planes.com/org_admin/travel/bookings/2345678) |
+
+### Expenses
+
+- [ ] ✅ Per Diem - €28 (3 days) [View](https://api.lanes-planes.com/org_admin/travel/bookings/1234567/receipt_entity/profiles/9876543)
+- [ ] 🚧 Taxi Reciept - Jan 15, 2026 - €35 [View](https://api.lanes-planes.com/org_admin/travel/bookings/1234567/receipt_entity/profiles/8765432) - _Receipt `2026-01-16-uber-zurich-chf20.25.pdf` could not be uploaded_
+- [ ] ❌ Taxi Receipt - _Found in E-Mail but no receipt available_
+
+### Missing expenses
+
+- [ ] Transport from Home to the ZRH airport - searched for Uber/taxi/MILES receipts on Jan 1 - Jan 30 2026 - _nothing found_
+- [ ] Transport from the BER airport to the destination - searched for Uber/taxi/MILES receipts on Jan 1 - Jan 30 2026 - _not found_
 ```
-
-Valid `STATUS` values:
-
-- 🚧 found with receipt
-- ❌ found without receipt
-- ❌ created without receipt
-- ✅ created with receipt
-
-If multiple trips, summarize each.
 
 ## Browser Automation Notes
 
@@ -257,6 +285,7 @@ Notes:
 
 - My Login to Lanes & Planes is via SSO with the email `robin-manuel.thiel@jtl-software.com`
 - Reciepts can be found in the Personal mailbox (robin-manuel@thiel1.de) and Work inbox (robin-manuel.thiel@jtl-software.com)
-- Expense reports should be created in Obsidian under `01 Projects/` with the name `Expenses <DATE_RANGE>` (e.g., `Expenses Jan 1 - Mar 5 2026`)
+- Expense reports should be created in **Obsidian** under `01 Projects/` with the name `Expenses <DATE_RANGE>` (e.g., `Expenses Jan 1 - Mar 5 2026`)
 - When searching for receipts in my E-Mail filter for the `Expenses` category in both inboxes, as all expenses are categorized with this category in my E-Mail. If you don't find receipts or invoices for missing legs, ask the human to also search the entire inbox without the `Expenses` category filter, as sometimes receipts are not categorized correctly.
 - My Home Address is "Wasserwerkstrasse 16, 8006 Zurich, Switzerland". If a trip location or leg location is this address, refer to it as "Home" in the expense reports
+- If the currency is CHF, the country ("Land") is Switzerland ("Schweiz").
