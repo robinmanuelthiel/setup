@@ -11,6 +11,7 @@ tap "fluxcd/tap"
 tap "azure/azd" 
 tap "ngrok/ngrok" 
 tap "shopify/shopify"
+tap "hashicorp/tap"
 
 # CLI
 brew "tree"
@@ -32,7 +33,7 @@ brew "azure-cli"
 brew "azd"
 #cask "microsoft-azure-storage-explorer"
 #cask "azure-data-studio"
-brew "terraform"
+brew "hashicorp/tap/terraform"
 
 # Development
 cask "visual-studio-code"
