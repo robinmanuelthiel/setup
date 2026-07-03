@@ -49,7 +49,8 @@ brew "fnm" # nvm replacement
 cask "github"
 brew "gh"
 cask "copilot-cli"
-cask "docker-desktop"
+#cask "docker-desktop"
+cask "podman-desktop"
 cask "powershell"
 cask "postman"
 brew "azure-functions-core-tools@3"
@@ -73,6 +74,8 @@ cask "ngrok"
 cask "github-copilot-for-xcode"
 brew "gemini-cli"
 cask "claude-code"
+cask "codex-app"
+cask "copilot-app"
 
 # Kubernetes
 brew "kubernetes-cli"
@@ -146,7 +149,7 @@ cask "screen-studio"
 cask "parallels"
 mas "Apple Remote Desktop", id: 409907375
 cask "anydesk"
-
+cask "tailscale-app"
 
 # macOS Tools
 # mas "Magent", id: 441258766 # Replaced by Raycast
