@@ -75,7 +75,7 @@ cask "github-copilot-for-xcode"
 brew "gemini-cli"
 cask "claude-code"
 cask "codex-app"
-cask "copilot-app"
+cask "github-copilot-app"
 
 # Kubernetes
 brew "kubernetes-cli"
