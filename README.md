@@ -85,6 +85,20 @@ In case, a new device needs to be set up, the following steps are requires
 
 ## AI Agents
 
+### Claude Code
+
+The skills in `Skills/` are available as the `setup-skills` Claude Code plugin. Load the plugin from a local checkout:
+
+```bash
+claude --plugin-dir /path/to/setup
+```
+
+The manifest at `.claude-plugin/plugin.json` points to the entire `Skills/` directory, so newly added skills are discovered automatically.
+
+The **Generate Claude plugin manifest** GitHub Actions workflow regenerates the manifest on every branch push and can also be run manually. It commits back to the same branch only if the manifest changes. Commits made with `GITHUB_TOKEN` do not trigger another workflow run.
+
+The workflow needs permission to write repository contents; branch protection rules must also permit its generated commits. To change plugin metadata, edit the generation step in `.github/workflows/generate-claude-plugin.yml` rather than the generated JSON.
+
 ### OpenClaw
 
 [OpenClaw](https://openclaw.ai) is an AI agent platform that supports custom skills for automation and integration.
