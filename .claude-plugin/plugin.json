@@ -1,0 +1,5 @@
+{
+  "name": "setup-skills",
+  "description": "Personal AI agent skills for expenses and YouTube transcripts.",
+  "skills": "./Skills"
+}
