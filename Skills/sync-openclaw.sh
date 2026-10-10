@@ -16,11 +16,6 @@ if [ ! -d "$REPO_SKILLS_DIR" ]; then
   exit 1
 fi
 
-# Pull latest changes from Git
-echo "⬇️  Pulling latest changes from Git..."
-git -C "$REPO_ROOT" pull
-echo ""
-
 # Create target directory if needed
 mkdir -p "$OPENCLAW_SKILLS_DIR"
 
