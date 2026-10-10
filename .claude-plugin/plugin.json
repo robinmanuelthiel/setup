@@ -1,5 +1,5 @@
 {
-  "name": "setup-skills",
-  "description": "Personal AI agent skills for expenses and YouTube transcripts.",
+  "name": "personal-skills",
+  "description": "Personal AI agent skills from Robin-Manuel Thiel.",
   "skills": "./Skills"
 }
