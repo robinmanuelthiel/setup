@@ -28,10 +28,10 @@ jobs:
           python3 - <<'PY'
           import json
           from pathlib import Path
-
+          
           manifest = {
-              "name": "setup-skills",
-              "description": "Personal AI agent skills for expenses and YouTube transcripts.",
+              "name": "personal-skills",
+              "description": "Personal AI agent skills from Robin-Manuel Thiel.",
               "skills": "./Skills",
           }
           path = Path(".claude-plugin/plugin.json")
