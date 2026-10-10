@@ -103,12 +103,6 @@ The workflow needs permission to write repository contents; branch protection ru
 
 [OpenClaw](https://openclaw.ai) is an AI agent platform that supports custom skills for automation and integration.
 
-**Install OpenClaw:**
-
-```bash
-npm install -g openclaw
-openclaw gateway start
-```
 
 **Sync Skills:**
 
@@ -117,6 +111,9 @@ This repository contains custom AI Agent skills in the `Skills/` folder.
 To make them available to OpenClaw, run:
 
 ```bash
+gh repo clone robinmanuelthiel/setup ~/Source/Personal/setup
+cd ~/Source/Personal/setup
+
 bash ./Skills/sync-openclaw.sh
 ```
 
