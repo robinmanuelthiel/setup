@@ -55,7 +55,6 @@
 - Clean Shot X
 - Reclaim
 - Deepcast
-- Whisper Dictation (Download Small Multi-Lingual Model)
 - Todoist
 - GitHub
 
