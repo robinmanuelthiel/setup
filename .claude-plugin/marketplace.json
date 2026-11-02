@@ -1,0 +1,14 @@
+{
+  "name": "robinmanuelthiel-plugin",
+  "description": "Personal AI Plugin from Robin-Manuel Thiel.",
+  "owner": {
+    "name": "Robin-Manuel Thiel"
+  },
+  "plugins": [
+    {
+      "name": "personal-skills",
+      "source": "./",
+      "description": "Personal AI agent skills from Robin-Manuel Thiel."
+    }
+  ]
+}

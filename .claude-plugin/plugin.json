@@ -1,5 +1,8 @@
 {
   "name": "personal-skills",
   "description": "Personal AI agent skills from Robin-Manuel Thiel.",
+  "author": {
+    "name": "Robin-Manuel Thiel"
+  },
   "skills": "./Skills"
 }

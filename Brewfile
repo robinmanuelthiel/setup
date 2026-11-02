@@ -150,10 +150,11 @@ cask "parallels"
 mas "Apple Remote Desktop", id: 409907375
 cask "anydesk"
 cask "tailscale-app"
+cask "nordvpn"
 
 # macOS Tools
 # mas "Magent", id: 441258766 # Replaced by Raycast
-cask "bartender"
+# cask "bartender"
 #cask "spotmenu"
 # mas "ToothFairy", id: 1191449274
 mas "Dato", id: 1470584107
