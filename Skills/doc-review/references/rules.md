@@ -1,7 +1,7 @@
 # Review rules
 
-Version: 4
-Last updated: 2026-10-08
+Version: 5
+Last updated: 2026-11-02
 
 ## How this file works
 
@@ -51,6 +51,7 @@ Severity levels:
   - A term is explained later in the document than its first use.
   - An abbreviation is used without its long form on first use.
   - A specific-sounding name ("the sync job", "the gateway rule") is used as if known, with no description.
+  - A term appears only in a diagram or image and is never explained in the text.
 - **Does not trigger when**: the term is introduced in a linked prerequisite document that the document explicitly says to read first.
 
 ### C3 Use the established vocabulary
@@ -192,3 +193,4 @@ Severity levels:
 - v2 (2026-10-07): W1 now allows the WHAT but requires WHY and WHERE, with detailed checks for UI-only configuration. W4 simplified to "No task without an owner". O1 exempts data tables and hands overview cases to O5 and drift cases to O6. New rules: O5 (overviews contain no changeable values), O6 (facts stay consistent).
 - v3 (2026-10-07): removed Status and Evidence fields. Every rule in this file is approved by Robin-Manuel.
 - v4 (2026-10-08): learning run on a PR review (infrastructure code comment). W1 gets two triggers: text that explains WHAT or risk but not WHY, and additions on top of a standard without saying why the standard is not enough. Skill scope extended to code comments and pull requests.
+- v5 (2026-11-02): learning run on a proposal review. C2 gets a trigger for terms that only appear in diagrams or images.
